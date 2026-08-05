@@ -39,13 +39,13 @@ export default function Hero() {
         transition={{ duration: 0.4, delay: 0.65 }}
       >
         <p className="text-slate max-w-xl mt-6 text-base md:text-lg leading-relaxed">
-          Trabalho com{' '}
-          <span className="text-lightest-slate">desenvolvimento Front-End</span>,{' '}
-          <span className="text-lightest-slate">suporte técnico N1/N2</span> e{' '}
-          <span className="text-lightest-slate">integrações de sistemas</span>.{' '}
-          Tenho formação em Ciência da Computação e Design Gráfico,
-          e atualmente estou na{' '}
-          <a href="#experience" className="text-teal hover:underline">Unico Drop</a>.
+          Sou formado em <span className="text-lightest-slate">Ciência da Computação</span> e{' '}
+          <span className="text-lightest-slate">Design Gráfico</span>, atuando com{' '}
+          <span className="text-lightest-slate">Suporte Técnico (N1/N2)</span>,{' '}
+          <span className="text-lightest-slate">integrações de sistemas</span>,{' '}
+          <span className="text-lightest-slate">desenvolvimento Front-End</span> e{' '}
+          <span className="text-lightest-slate">Analista de Customer Success</span>.{' '}
+          Localizado em São Caetano do Sul, SP.
         </p>
       </motion.div>
 

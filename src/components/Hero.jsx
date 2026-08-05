@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Phone, ExternalLink } from 'lucide-react';
+import { Link, Mail, Phone, ExternalLink, Briefcase } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -21,10 +21,10 @@ export default function Hero() {
         
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <a href="https://github.com/FilipeVicenteH" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-3 bg-surfaceHighlight hover:bg-white/10 border border-white/5 rounded-full transition-all text-sm font-medium hover:-translate-y-1">
-            <Github size={18} /> GitHub
+            <Link size={18} /> GitHub
           </a>
           <a href="https://www.linkedin.com/in/filipevicentehidalgo" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-3 bg-surfaceHighlight hover:bg-white/10 border border-white/5 rounded-full transition-all text-sm font-medium hover:-translate-y-1">
-            <Linkedin size={18} /> LinkedIn
+            <Briefcase size={18} /> LinkedIn
           </a>
           <a href="https://www.behance.net/filipevicenteh" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-3 bg-surfaceHighlight hover:bg-white/10 border border-white/5 rounded-full transition-all text-sm font-medium hover:-translate-y-1">
             <ExternalLink size={18} /> Behance

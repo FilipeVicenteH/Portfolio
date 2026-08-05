@@ -1,6 +1,15 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function About() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText('5511966152956');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <section id="about" className="py-24 px-6 md:px-12 max-w-5xl mx-auto">
       <motion.div
@@ -67,7 +76,18 @@ export default function About() {
                   <span className="text-teal font-mono text-xs mt-0.5">▹</span>
                   <div>
                     <span className="text-slate-light block text-xs uppercase tracking-wider mb-0.5">Telefone / WhatsApp</span>
-                    <span className="text-lightest-slate">(11) 96615-2956</span>
+                    <div className="flex items-center gap-2">
+                      <a href="https://wa.me/5511966152956" target="_blank" rel="noreferrer" className="text-lightest-slate hover:text-teal transition-colors">
+                        (11) 96615-2956
+                      </a>
+                      <button onClick={handleCopy} className="text-slate hover:text-teal transition-colors" title="Copiar número" aria-label="Copiar número">
+                        {copied ? (
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        ) : (
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        )}
+                      </button>
+                    </div>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">

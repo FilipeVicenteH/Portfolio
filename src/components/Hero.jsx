@@ -1,38 +1,66 @@
 import { motion } from 'framer-motion';
-import { Link, Mail, Phone, ExternalLink, Briefcase } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[80vh] flex flex-col justify-center items-center text-center p-6 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-background to-background -z-10 blur-3xl opacity-50"></div>
-      
+    <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 max-w-5xl mx-auto pt-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="max-w-4xl"
+        transition={{ duration: 0.4, delay: 0.2 }}
       >
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4 text-white">
-          Filipe Vicente <span className="text-primary">Hidalgo</span>
+        <p className="font-mono text-teal text-sm md:text-base mb-5">
+          Olá, meu nome é
+        </p>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.35 }}
+      >
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight">
+          Filipe Vicente Hidalgo.
         </h1>
-        <h2 className="text-xl md:text-2xl text-gray-400 mb-8 font-light">
-          Desenvolvedor <span className="text-white font-medium">Front-End / Back-End Júnior</span> | QA & Suporte Técnico
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.5 }}
+      >
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-slate mt-2 leading-tight">
+          Transformo ideias em experiências digitais.
         </h2>
-        
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <a href="https://github.com/FilipeVicenteH" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-3 bg-surfaceHighlight hover:bg-white/10 border border-white/5 rounded-full transition-all text-sm font-medium hover:-translate-y-1">
-            <Link size={18} /> GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/filipevicentehidalgo" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-3 bg-surfaceHighlight hover:bg-white/10 border border-white/5 rounded-full transition-all text-sm font-medium hover:-translate-y-1">
-            <Briefcase size={18} /> LinkedIn
-          </a>
-          <a href="https://www.behance.net/filipevicenteh" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-3 bg-surfaceHighlight hover:bg-white/10 border border-white/5 rounded-full transition-all text-sm font-medium hover:-translate-y-1">
-            <ExternalLink size={18} /> Behance
-          </a>
-          <a href="mailto:filipe_vicente@hotmail.com" className="flex items-center gap-2 px-6 py-3 bg-surfaceHighlight hover:bg-white/10 border border-white/5 rounded-full transition-all text-sm font-medium hover:-translate-y-1">
-            <Mail size={18} /> Email
-          </a>
-        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.65 }}
+      >
+        <p className="text-slate max-w-xl mt-6 text-base md:text-lg leading-relaxed">
+          Sou formado em{' '}
+          <span className="text-lightest-slate">Ciência da Computação</span> e{' '}
+          <span className="text-lightest-slate">Design Gráfico</span>, atuando com{' '}
+          <span className="text-lightest-slate">Suporte Técnico (N1/N2)</span>,
+          integrações de sistemas e desenvolvimento{' '}
+          <span className="text-lightest-slate">Front-End</span>. Baseado em{' '}
+          <span className="text-teal">São Caetano do Sul, SP</span>.
+        </p>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.8 }}
+        className="mt-10"
+      >
+        <a
+          href="#contact"
+          className="inline-block px-7 py-4 border border-teal text-teal font-mono text-sm rounded hover:bg-teal-tint transition-colors duration-200"
+        >
+          Entre em contato
+        </a>
       </motion.div>
     </section>
   );

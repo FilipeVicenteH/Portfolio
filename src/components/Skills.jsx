@@ -2,40 +2,40 @@ import { motion } from 'framer-motion';
 
 const skillCategories = [
   {
-    title: 'Desenvolvimento Front-End',
+    title: 'Front-End',
     skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Bootstrap'],
   },
   {
-    title: 'Backend & APIs',
-    skills: ['Node.js (básico)', 'APIs REST', 'WebHooks'],
+    title: 'Back-End & APIs',
+    skills: ['Node.js', 'APIs REST', 'Webhooks'],
   },
   {
     title: 'Banco de Dados',
     skills: ['SQL', 'PostgreSQL', 'Oracle'],
   },
   {
-    title: 'Suporte Técnico',
-    skills: ['Troubleshooting', 'Help Desk N1/N2', 'Suporte a Sistemas', 'Suporte Remoto', 'Sistemas de Chamados'],
+    title: 'Suporte & Infraestrutura',
+    skills: ['Troubleshooting N1/N2', 'Help Desk', 'Suporte Remoto', 'Sistemas de Chamados'],
   },
   {
-    title: 'Integrações',
-    skills: ['API', 'Webhook', 'Plataformas E-commerce', 'Shopify', 'NuvemShop'],
+    title: 'Integrações & E-commerce',
+    skills: ['API REST', 'Webhooks', 'Shopify', 'NuvemShop'],
   },
   {
-    title: 'Sistemas Operacionais',
-    skills: ['Windows', 'Linux (básico)', 'iOS'],
+    title: 'Sistemas & Redes',
+    skills: ['Windows', 'Linux', 'iOS', 'TCP/IP', 'DNS', 'DHCP'],
   },
   {
-    title: 'Redes & Hardware',
-    skills: ['TCP/IP', 'DNS', 'DHCP', 'Configuração de Rede', 'Instalação de Computadores', 'Manutenção Básica'],
+    title: 'Hardware',
+    skills: ['Montagem de PCs', 'Manutenção', 'Instalação de Software'],
   },
   {
-    title: 'Ferramentas & Design',
-    skills: ['Git', 'GitHub', 'Figma', 'Photoshop', 'Illustrator'],
+    title: 'Design & Ferramentas',
+    skills: ['Figma', 'Photoshop', 'Illustrator', 'Git', 'GitHub'],
   },
   {
-    title: 'BI & Dados',
-    skills: ['Power BI', 'Excel (Intermediário)'],
+    title: 'Dados & BI',
+    skills: ['Power BI', 'Excel Intermediário'],
   },
 ];
 
@@ -45,7 +45,7 @@ const softSkills = [
   'Organização',
   'Resolução de problemas',
   'Trabalho em equipe',
-  'Aprendizado rápido (Autodidata)',
+  'Autodidata',
 ];
 
 export default function Skills() {
@@ -71,7 +71,7 @@ export default function Skills() {
         transition={{ duration: 0.5 }}
       >
         <h2 className="section-heading">
-          <span className="num">03.</span> Habilidades Técnicas
+          <span className="num">03.</span> O que eu uso
         </h2>
 
         <motion.div
@@ -105,7 +105,7 @@ export default function Skills() {
           ))}
         </motion.div>
 
-        {/* Competências (Soft Skills) */}
+        {/* Competências */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

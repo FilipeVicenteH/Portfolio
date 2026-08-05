@@ -29,7 +29,7 @@ export default function Hero() {
         transition={{ duration: 0.4, delay: 0.5 }}
       >
         <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-slate mt-2 leading-tight">
-          Transformo ideias em experiências digitais.
+          Construo interfaces e resolvo problemas.
         </h2>
       </motion.div>
 
@@ -39,13 +39,13 @@ export default function Hero() {
         transition={{ duration: 0.4, delay: 0.65 }}
       >
         <p className="text-slate max-w-xl mt-6 text-base md:text-lg leading-relaxed">
-          Sou formado em{' '}
-          <span className="text-lightest-slate">Ciência da Computação</span> e{' '}
-          <span className="text-lightest-slate">Design Gráfico</span>, atuando com{' '}
-          <span className="text-lightest-slate">Suporte Técnico (N1/N2)</span>,
-          integrações de sistemas e desenvolvimento{' '}
-          <span className="text-lightest-slate">Front-End</span>. Baseado em{' '}
-          <span className="text-teal">São Caetano do Sul, SP</span>.
+          Trabalho com{' '}
+          <span className="text-lightest-slate">desenvolvimento Front-End</span>,{' '}
+          <span className="text-lightest-slate">suporte técnico N1/N2</span> e{' '}
+          <span className="text-lightest-slate">integrações de sistemas</span>.{' '}
+          Tenho formação em Ciência da Computação e Design Gráfico,
+          e atualmente estou na{' '}
+          <a href="#experience" className="text-teal hover:underline">Unico Drop</a>.
         </p>
       </motion.div>
 
@@ -59,7 +59,7 @@ export default function Hero() {
           href="#contact"
           className="inline-block px-7 py-4 border border-teal text-teal font-mono text-sm rounded hover:bg-teal-tint transition-colors duration-200"
         >
-          Entre em contato
+          Fale comigo
         </a>
       </motion.div>
     </section>

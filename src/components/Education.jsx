@@ -4,20 +4,20 @@ const degrees = [
   {
     course: 'Bacharelado em Ciências da Computação',
     institution: 'Centro Universitário União das Américas Descomplica',
-    period: 'Conclusão em Julho de 2026',
+    period: 'Concluído em Julho/2026',
   },
   {
     course: 'Tecnólogo em Design Gráfico',
     institution: 'Faculdade Uninove',
-    period: 'Conclusão em Julho de 2020',
+    period: 'Concluído em Julho/2020',
   },
 ];
 
 const certs = [
   { name: 'Web Design', institution: 'Jorge Street', year: '2014' },
-  { name: 'Inglês — Intermediário', institution: 'Count Down', year: '2016' },
+  { name: 'Inglês Intermediário', institution: 'Count Down', year: '2016' },
   { name: 'Modelagem 3D', institution: 'All Net', year: '2014' },
-  { name: 'Excel (Intermediário)', institution: 'Uninove', year: '2019' },
+  { name: 'Excel Intermediário', institution: 'Uninove', year: '2019' },
 ];
 
 export default function Education() {
@@ -30,7 +30,7 @@ export default function Education() {
         transition={{ duration: 0.5 }}
       >
         <h2 className="section-heading">
-          <span className="num">04.</span> Formação Acadêmica
+          <span className="num">04.</span> Formação
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -41,9 +41,8 @@ export default function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.15 }}
-              className="group"
             >
-              <div className="bg-navy-light p-6 rounded-lg border border-navy-lighter/30 hover:border-teal/20 transition-all duration-300 relative">
+              <div className="bg-navy-light p-6 rounded-lg border border-navy-lighter/30 hover:border-teal/20 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-4">
                   <svg className="text-teal shrink-0" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
@@ -60,13 +59,12 @@ export default function Education() {
           ))}
         </div>
 
-        {/* Certificados e Cursos */}
         <h3 className="text-lightest-slate font-semibold text-lg mb-6 flex items-center gap-3">
           <svg className="text-teal" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
             <circle cx="12" cy="8" r="6" />
             <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
           </svg>
-          Certificados e Cursos
+          Cursos e Certificados
         </h3>
         <div className="grid sm:grid-cols-2 gap-4">
           {certs.map((cert, i) => (
@@ -82,7 +80,7 @@ export default function Education() {
               <div>
                 <p className="text-lightest-slate text-sm font-medium">{cert.name}</p>
                 <p className="text-slate text-xs">
-                  {cert.institution} — <span className="font-mono">{cert.year}</span>
+                  {cert.institution} · <span className="font-mono">{cert.year}</span>
                 </p>
               </div>
             </motion.div>

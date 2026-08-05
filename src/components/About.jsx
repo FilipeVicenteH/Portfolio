@@ -16,39 +16,42 @@ export default function About() {
         <div className="grid md:grid-cols-3 gap-12">
           <div className="md:col-span-2 space-y-4">
             <p>
-              Sou formado em <span className="text-lightest-slate">Ciência da Computação</span> pelo
-              Centro Universitário União das Américas Descomplica e em{' '}
-              <span className="text-lightest-slate">Design Gráfico</span> pela Faculdade Uninove,
-              atuando com Suporte Técnico (N1/N2), integrações de sistemas e desenvolvimento Front-End.
+              Me chamo Filipe, tenho formação em{' '}
+              <span className="text-lightest-slate">Ciência da Computação</span> (Descomplica, 2026) e{' '}
+              <span className="text-lightest-slate">Design Gráfico</span> (Uninove, 2020).
+              No dia a dia, transito entre código e suporte — já corrigi integrações
+              quebradas de API às 23h e já redesenhei telas inteiras pensando em quem
+              ia usar no celular.
             </p>
             <p>
-              Tenho experiência com{' '}
-              <span className="text-lightest-slate">troubleshooting técnico</span>, APIs, Webhooks,
-              automações e atendimento ao cliente, além de desenvolvimento de interfaces web com foco
-              em usabilidade (<span className="text-teal">UI/UX</span>).
+              Hoje atuo na <span className="text-lightest-slate">Unico Drop</span> com
+              suporte técnico N1/N2, integrações via API e Webhook,
+              automações de fluxo (WhatsApp, e-mail), além de mexer no front
+              com React quando precisa. Também monto dashboards em Power BI
+              pra ajudar o time a tomar decisões com dados.
             </p>
             <p>
-              Atuação com análise de dados em{' '}
-              <span className="text-lightest-slate">Power BI</span> e Excel, onboarding de clientes
-              e Customer Success. Meu perfil{' '}
-              <span className="text-lightest-slate">analítico, organizado e autodidata</span>, com
-              facilidade para resolver problemas complexos e aprender novas tecnologias.
+              Antes disso, passei pela <span className="text-lightest-slate">Levlife</span> como
+              designer e social media, cuidando do e-commerce e criando conteúdo
+              digital. E no <span className="text-lightest-slate">Cartório de São Caetano</span>,
+              aprendi a lidar com volume alto de documentos e processos que não podem atrasar.
             </p>
-            <p className="text-lightest-slate font-medium mt-6">
-              Objetivo: Atuar como Desenvolvedor Front-End ou Back-End Júnior, QA Teste, Analista de Suporte Técnico.
+            <p>
+              Sou autodidata por natureza — quando não sei algo, vou atrás até resolver.
+              Gosto de ambientes onde posso aprender rápido e contribuir de verdade.
             </p>
           </div>
 
           {/* Contact Info Card */}
           <div className="relative">
             <div className="bg-navy-light rounded-lg p-6 border border-navy-lighter/50">
-              <h3 className="text-lightest-slate font-semibold text-lg mb-4">Informações</h3>
+              <h3 className="text-lightest-slate font-semibold text-lg mb-4">Contato</h3>
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-3">
                   <span className="text-teal font-mono text-xs mt-0.5">▹</span>
                   <div>
                     <span className="text-slate-light block text-xs uppercase tracking-wider mb-0.5">Localização</span>
-                    <span className="text-lightest-slate">Barcelona — São Caetano do Sul, SP</span>
+                    <span className="text-lightest-slate">São Caetano do Sul, SP</span>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">

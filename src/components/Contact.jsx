@@ -11,12 +11,12 @@ export default function Contact() {
       >
         <p className="font-mono text-teal text-sm mb-3">05. E agora?</p>
         <h2 className="text-4xl md:text-5xl font-bold text-lightest-slate mb-5">
-          Entre em contato
+          Vamos conversar
         </h2>
         <p className="text-slate max-w-lg mx-auto mb-10 leading-relaxed">
-          Estou aberto a novas oportunidades como Desenvolvedor Front-End/Back-End Júnior,
-          QA ou Analista de Suporte Técnico. Seja para uma proposta, dúvida ou apenas
-          para trocar uma ideia — minha caixa de entrada está sempre aberta.
+          Estou buscando oportunidades como Dev Front-End/Back-End Júnior,
+          QA ou Suporte Técnico. Se tiver uma vaga, um projeto ou só quiser
+          trocar uma ideia sobre tecnologia, pode me chamar.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -32,7 +32,7 @@ export default function Contact() {
             rel="noreferrer"
             className="inline-block px-8 py-4 border border-teal text-teal font-mono text-sm rounded hover:bg-teal-tint transition-colors duration-200"
           >
-            WhatsApp
+            Chamar no WhatsApp
           </a>
         </div>
       </motion.div>

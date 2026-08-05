@@ -5,36 +5,36 @@ const jobs = [
   {
     company: 'Unico Drop',
     title: 'TI — Suporte Técnico',
-    period: 'Junho 2024 — Presente',
+    period: 'Jun 2024 — Presente',
     tasks: [
-      'Realizo atendimento técnico (N1/N2), solucionando incidentes e reduzindo tempo de resposta ao cliente.',
-      'Atuo na resolução de problemas envolvendo integrações via API e Webhooks entre plataformas.',
-      'Configuro e dou suporte a automações de mensagens (WhatsApp, e-mail e fluxos automatizados).',
-      'Implemento e corrijo plugins de rastreamento e integrações com lojas (Shopify, NuvemShop, etc).',
-      'Conduzo onboarding de novos clientes, garantindo ativação e uso correto da plataforma.',
-      'Atuo em Customer Success, auxiliando clientes na melhor utilização da ferramenta.',
-      'Desenvolvo melhorias Front-End (HTML, CSS, JS, React) com foco em UX/UI.',
-      'Crio dashboards em Power BI para análise de dados e apoio estratégico.',
+      'Atendo chamados técnicos N1/N2, diagnosticando e resolvendo incidentes que impactam a operação dos clientes.',
+      'Investigo e corrijo falhas em integrações de API e Webhooks entre a plataforma e sistemas externos.',
+      'Configuro automações de disparo de mensagens via WhatsApp e e-mail, criando e ajustando fluxos automatizados.',
+      'Implemento e faço manutenção de plugins de rastreamento e integrações com Shopify, NuvemShop e outras plataformas de e-commerce.',
+      'Faço o onboarding de clientes novos, garantindo que ativem e usem a plataforma corretamente desde o primeiro dia.',
+      'Acompanho clientes ativos com foco em Customer Success, ajudando a extrair mais valor da ferramenta.',
+      'Codifico melhorias no front-end (HTML, CSS, JavaScript, React) priorizando usabilidade e experiência do usuário.',
+      'Monto dashboards em Power BI para apoiar decisões do time com análise de dados.',
     ],
   },
   {
     company: 'Levlife',
-    title: 'Design — Social Mídia',
-    period: 'Março 2022 — Agosto 2023',
+    title: 'Design — Social Media',
+    period: 'Mar 2022 — Ago 2023',
     tasks: [
-      'Criei conteúdos e artes digitais, aumentando o engajamento da marca.',
-      'Gerenciei e-commerce e plataformas digitais.',
-      'Planejei campanhas digitais e organização de conteúdo.',
+      'Produzi peças gráficas e conteúdos digitais que aumentaram o engajamento nas redes da marca.',
+      'Gerenciei o e-commerce da empresa e administrei plataformas digitais de venda.',
+      'Planejei e organizei campanhas digitais, definindo calendário editorial e estratégia de conteúdo.',
     ],
   },
   {
-    company: '2º Tabelião de Protestos',
+    company: '2º Tabelião de Protestos e Notas — SCS',
     title: 'Auxiliar de Cartório',
-    period: 'Maio 2021 — Fevereiro 2022',
+    period: 'Mai 2021 — Fev 2022',
     tasks: [
-      'Análise e organização de documentos com alto volume de demanda.',
-      'Atendimento ao cliente e suporte administrativo.',
-      'Otimização de processos internos, garantindo maior eficiência operacional.',
+      'Analisei e organizei documentos jurídicos com alto volume diário de demanda.',
+      'Realizei atendimento presencial ao público, tirando dúvidas e direcionando solicitações.',
+      'Identifiquei e implementei melhorias nos processos internos, reduzindo retrabalho.',
     ],
   },
 ];
@@ -51,7 +51,7 @@ export default function Experience() {
         transition={{ duration: 0.5 }}
       >
         <h2 className="section-heading">
-          <span className="num">02.</span> Histórico Profissional
+          <span className="num">02.</span> Onde já trabalhei
         </h2>
 
         <div className="flex flex-col md:flex-row gap-0">

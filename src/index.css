@@ -1,13 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  body {
-    @apply bg-background text-gray-200 font-sans antialiased;
-    margin: 0;
-    overflow-x: hidden;
-  }
+@theme {
+  --color-background: #0a0a0a;
+  --color-surface: #121212;
+  --color-surfaceHighlight: #1e1e1e;
+  --color-primary: #8b5cf6;
+  --color-accent: #06b6d4;
+}
+
+body {
+  background-color: var(--color-background);
+  color: #e5e7eb;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 /* Custom Scrollbar for a premium feel */

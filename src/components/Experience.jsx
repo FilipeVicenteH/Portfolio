@@ -22,7 +22,10 @@ const jobs = [
     title: 'Design | Social Media',
     period: 'Mar 2022 - Ago 2023',
     tasks: [
-      'Produzi peças gráficas e conteúdos digitais que aumentaram o engajamento nas redes da marca, criando LandPages para aumentar o Engajamento da Marca e Convertendo clientes.',
+      'Desenvolvi peças gráficas, conteúdos digitais e materiais visuais para fortalecer a presença da marca nas redes sociais',
+      'Criei landing pages com foco em engajamento, divulgação de produtos e conversão de clientes',
+      'Gerenciei e-commerce e plataformas digitais, apoiando a organização de produtos, conteúdos e campanhas',
+      'Planejei campanhas digitais e organizei conteúdos estratégicos para melhorar a comunicação da marca',
     ],
   },
   {
@@ -30,7 +33,9 @@ const jobs = [
     title: 'Auxiliar de Cartório',
     period: 'Mai 2021 - Fev 2022',
     tasks: [
-      'Otimizei o trabalho deles com sistemas para auxiliar todo o processo e facilitando todo o processo.',
+      'Realizei análise, conferência e organização de documentos em alto volume, garantindo mais agilidade e precisão nos processos internos',
+      'Prestei atendimento ao cliente e suporte administrativo, auxiliando na resolução de dúvidas e demandas operacionais',
+      'Otimizei fluxos internos com o uso de sistemas e organização de processos, facilitando a rotina da equipe e aumentando a eficiência operacional',
     ],
   },
 ];

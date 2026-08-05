@@ -60,7 +60,7 @@ export default function About() {
                   <span className="text-teal font-mono text-xs mt-0.5">▹</span>
                   <div>
                     <span className="text-slate-light block text-xs uppercase tracking-wider mb-0.5">Localização</span>
-                    <span className="text-lightest-slate">São Caetano do Sul, SP</span>
+                    <span className="text-lightest-slate">Localizado em São Caetano do Sul, SP.</span>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">

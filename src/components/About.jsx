@@ -19,7 +19,7 @@ export default function About() {
               Me chamo Filipe, tenho formação em{' '}
               <span className="text-lightest-slate">Ciência da Computação</span> (Descomplica, 2026) e{' '}
               <span className="text-lightest-slate">Design Gráfico</span> (Uninove, 2020).
-              No dia a dia, transito entre código e suporte — já corrigi integrações
+              No dia a dia, transito entre código e suporte. Já corrigi integrações
               quebradas de API às 23h e já redesenhei telas inteiras pensando em quem
               ia usar no celular.
             </p>
@@ -37,7 +37,7 @@ export default function About() {
               aprendi a lidar com volume alto de documentos e processos que não podem atrasar.
             </p>
             <p>
-              Sou autodidata por natureza — quando não sei algo, vou atrás até resolver.
+              Sou autodidata por natureza. Quando não sei algo, vou atrás até resolver.
               Gosto de ambientes onde posso aprender rápido e contribuir de verdade.
             </p>
           </div>

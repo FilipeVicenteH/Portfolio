@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 const jobs = [
   {
     company: 'Unico Drop',
-    title: 'TI — Suporte Técnico',
-    period: 'Jun 2024 — Presente',
+    title: 'TI | Suporte Técnico',
+    period: 'Jun 2024 - Presente',
     tasks: [
       'Atendo chamados técnicos N1/N2, diagnosticando e resolvendo incidentes que impactam a operação dos clientes.',
       'Investigo e corrijo falhas em integrações de API e Webhooks entre a plataforma e sistemas externos.',
@@ -19,8 +19,8 @@ const jobs = [
   },
   {
     company: 'Levlife',
-    title: 'Design — Social Media',
-    period: 'Mar 2022 — Ago 2023',
+    title: 'Design | Social Media',
+    period: 'Mar 2022 - Ago 2023',
     tasks: [
       'Produzi peças gráficas e conteúdos digitais que aumentaram o engajamento nas redes da marca.',
       'Gerenciei o e-commerce da empresa e administrei plataformas digitais de venda.',
@@ -28,9 +28,9 @@ const jobs = [
     ],
   },
   {
-    company: '2º Tabelião de Protestos e Notas — SCS',
+    company: '2º Tabelião de Protestos e Notas (SCS)',
     title: 'Auxiliar de Cartório',
-    period: 'Mai 2021 — Fev 2022',
+    period: 'Mai 2021 - Fev 2022',
     tasks: [
       'Analisei e organizei documentos jurídicos com alto volume diário de demanda.',
       'Realizei atendimento presencial ao público, tirando dúvidas e direcionando solicitações.',

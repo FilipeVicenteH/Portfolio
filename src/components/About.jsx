@@ -39,16 +39,6 @@ export default function About() {
               com React quando precisa. Também monto dashboards em Power BI
               pra ajudar o time a tomar decisões com dados.
             </p>
-            <p>
-              Antes disso, passei pela <span className="text-lightest-slate">Levlife</span> como
-              designer e social media, cuidando do e-commerce e criando conteúdo
-              digital. E no <span className="text-lightest-slate">Cartório de São Caetano</span>,
-              aprendi a lidar com volume alto de documentos e processos que não podem atrasar.
-            </p>
-            <p>
-              Sou autodidata por natureza. Quando não sei algo, vou atrás até resolver.
-              Gosto de ambientes onde posso aprender rápido e contribuir de verdade.
-            </p>
           </div>
 
           {/* Contact Info Card */}

@@ -45,7 +45,7 @@ export default function Hero() {
           <span className="text-lightest-slate">integrações de sistemas</span>,{' '}
           <span className="text-lightest-slate">desenvolvimento Front-End</span> e{' '}
           <span className="text-lightest-slate">Analista de Customer Success</span>.{' '}
-          Localizado em São Caetano do Sul, SP.
+          Localizado em São Paulo.
         </p>
       </motion.div>
 

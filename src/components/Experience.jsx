@@ -22,9 +22,7 @@ const jobs = [
     title: 'Design | Social Media',
     period: 'Mar 2022 - Ago 2023',
     tasks: [
-      'Produzi peças gráficas e conteúdos digitais que aumentaram o engajamento nas redes da marca.',
-      'Gerenciei o e-commerce da empresa e administrei plataformas digitais de venda.',
-      'Planejei e organizei campanhas digitais, definindo calendário editorial e estratégia de conteúdo.',
+      'Produzi peças gráficas e conteúdos digitais que aumentaram o engajamento nas redes da marca, criando LandPages para aumentar o Engajamento da Marca e Convertendo clientes.',
     ],
   },
   {
@@ -32,9 +30,7 @@ const jobs = [
     title: 'Auxiliar de Cartório',
     period: 'Mai 2021 - Fev 2022',
     tasks: [
-      'Analisei e organizei documentos jurídicos com alto volume diário de demanda.',
-      'Realizei atendimento presencial ao público, tirando dúvidas e direcionando solicitações.',
-      'Identifiquei e implementei melhorias nos processos internos, reduzindo retrabalho.',
+      'Otimizei o trabalho deles com sistemas para auxiliar todo o processo e facilitando todo o processo.',
     ],
   },
 ];
@@ -51,7 +47,7 @@ export default function Experience() {
         transition={{ duration: 0.5 }}
       >
         <h2 className="section-heading">
-          <span className="num">02.</span> Onde já trabalhei
+          <span className="num">02.</span> Histórico Profissional
         </h2>
 
         <div className="flex flex-col md:flex-row gap-0">

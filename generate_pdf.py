@@ -159,30 +159,29 @@ def create_resume(output_filename):
     story.append(HRFlowable(width="100%", thickness=0.5, color=LINE_COLOR, spaceBefore=1, spaceAfter=3))
     summary_p = (
         "Profissional com formação em <b>Ciência da Computação</b> e <b>Design Gráfico</b>, atuando em Suporte Técnico (N1/N2), "
-        "integrações de sistemas (APIs e Webhooks), desenvolvimento Front-End (React, JavaScript) e Customer Success. "
-        "Experiência no diagnóstico e resolução de incidentes técnicos, automação de fluxos operacionais (WhatsApp/E-mail), "
-        "onboarding de clientes e criação de dashboards em Power BI. Perfil analítico e orientado a resultados, unindo capacidade técnica "
-        "à visão de usabilidade e experiência do usuário (UX/UI)."
+        "integrações de sistemas (APIs e Webhooks), desenvolvimento Front-End (React, Next.js, TypeScript) e Customer Success. "
+        "Experiência no desenvolvimento do UnicoCRM (Next.js 15, Neon PostgreSQL), automação de fluxos operacionais (WhatsApp/E-mail), "
+        "redesign de UI/UX e dashboards em Power BI. Perfil analítico e orientado a resultados técnicos e de negócios."
     )
     story.append(Paragraph(summary_p, body_style))
     story.append(Spacer(1, 3))
 
-    # 3. HABILIDADES TÉCNICAS (Clean 2-Column Key-Value Table)
+    # 3. HABILIDADES TÉCNICAS
     story.append(Paragraph("HABILIDADES TÉCNICAS", section_heading_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=LINE_COLOR, spaceBefore=1, spaceAfter=3))
 
     skills_data = [
         [
             Paragraph("<b>Front-End:</b>", skill_label_style),
-            Paragraph("HTML5, CSS3, JavaScript (ES6+), React, Tailwind CSS, Bootstrap", skill_val_style)
+            Paragraph("HTML5, CSS3, JavaScript (ES6+), React, Next.js 15, TypeScript, Tailwind, Bootstrap", skill_val_style)
         ],
         [
             Paragraph("<b>Back-End & APIs:</b>", skill_label_style),
-            Paragraph("Node.js, APIs RESTful, Webhooks, JSON", skill_val_style)
+            Paragraph("Node.js, APIs RESTful, Webhooks, JSON, Prisma ORM", skill_val_style)
         ],
         [
             Paragraph("<b>Bancos de Dados & BI:</b>", skill_label_style),
-            Paragraph("SQL, PostgreSQL, Oracle, Power BI, Excel Intermediário/Avançado", skill_val_style)
+            Paragraph("SQL, PostgreSQL (Neon Cloud), Oracle, Power BI, Excel Intermediário/Avançado", skill_val_style)
         ],
         [
             Paragraph("<b>Suporte & Operações:</b>", skill_label_style),
@@ -237,12 +236,12 @@ def create_resume(output_filename):
     story.append(Spacer(1, 1.5))
 
     j1_bullets = [
-        "Realizo atendimento técnico (N1/N2), solucionando incidentes operacionais e reduzindo o tempo de resposta (SLA) ao cliente.",
+        "Idealizei e desenvolvi o UnicoCRM (Next.js 15, TypeScript, Prisma, Neon PostgreSQL) para automação e reconversão de clientes cancelados.",
+        "Liderei a reformulação visual de UI/UX (React, Tailwind CSS, Figma) da plataforma UnicoDrop, otimizando a usabilidade do usuário.",
         "Investigo e corrijo falhas em integrações via API e Webhooks entre a plataforma e lojas virtuais (Shopify, Nuvemshop).",
-        "Configuro automações de disparo de mensagens via WhatsApp e e-mail, criando e ajustando fluxos automatizados.",
-        "Conduzo o onboarding de novos clientes e atuo em Customer Success, garantindo a retenção e adoção da plataforma.",
-        "Desenvolvo melhorias no Front-End (HTML, CSS, JS, React) priorizando usabilidade e experiência do usuário (UX/UI).",
-        "Construo dashboards no Power BI para análise de dados estratégicos e suporte à tomada de decisão."
+        "Configuro automações de disparo de mensagens (WhatsApp/E-mail) e realizo atendimento técnico N1/N2 com redução de SLA.",
+        "Conduzo o onboarding de novos clientes e atuo em Customer Success, garantindo a retenção e adoção contínua do sistema.",
+        "Construo dashboards gerenciais (Power BI, Recharts) para monitoramento de métricas operacionais e taxas de churn."
     ]
     for bullet in j1_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))

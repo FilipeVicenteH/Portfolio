@@ -50,8 +50,8 @@ def create_resume(output_filename):
         'ContactInfo',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.0,
-        leading=10.5,
+        fontSize=7.8,
+        leading=10.2,
         textColor=TEXT_MUTED,
         alignment=TA_CENTER
     )
@@ -71,8 +71,8 @@ def create_resume(output_filename):
         'BodyDark',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.3,
-        leading=11.2,
+        fontSize=8.2,
+        leading=11.0,
         textColor=TEXT_DARK,
         alignment=TA_JUSTIFY
     )
@@ -81,8 +81,8 @@ def create_resume(output_filename):
         'JobTitle',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=9.0,
-        leading=11,
+        fontSize=8.8,
+        leading=10.8,
         textColor=PRIMARY_COLOR
     )
 
@@ -90,8 +90,8 @@ def create_resume(output_filename):
         'JobCompany',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=8.5,
-        leading=10.5,
+        fontSize=8.4,
+        leading=10.4,
         textColor=SECONDARY_COLOR
     )
 
@@ -99,8 +99,8 @@ def create_resume(output_filename):
         'JobPeriod',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.0,
-        leading=10.5,
+        fontSize=7.8,
+        leading=10.2,
         textColor=TEXT_MUTED,
         alignment=2 # Right
     )
@@ -109,8 +109,8 @@ def create_resume(output_filename):
         'BulletText',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.1,
-        leading=10.5,
+        fontSize=8.0,
+        leading=10.4,
         textColor=TEXT_DARK,
         leftIndent=10,
         firstLineIndent=-6,
@@ -121,8 +121,8 @@ def create_resume(output_filename):
         'SkillLabel',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=8.2,
-        leading=11,
+        fontSize=8.0,
+        leading=10.8,
         textColor=PRIMARY_COLOR
     )
 
@@ -130,8 +130,8 @@ def create_resume(output_filename):
         'SkillVal',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.2,
-        leading=11,
+        fontSize=8.0,
+        leading=10.8,
         textColor=TEXT_DARK
     )
 
@@ -145,10 +145,10 @@ def create_resume(output_filename):
 
     contact_text = (
         "São Paulo, SP &bull; filipe_vicente@hotmail.com &bull; (11) 96615-2956<br/>"
-        "<a href='https://www.linkedin.com/in/filipevicentehidalgo' color='#0D9488'>LinkedIn</a> &bull; "
-        "<a href='https://github.com/FilipeVicenteH' color='#0D9488'>GitHub</a> &bull; "
-        "<a href='https://www.behance.net/filipevicenteh' color='#0D9488'>Behance</a> &bull; "
-        "<a href='https://filipevicenteh.vercel.app' color='#0D9488'>Portfólio Online</a>"
+        "LinkedIn: <a href='https://www.linkedin.com/in/filipevicentehidalgo' color='#0D9488'>linkedin.com/in/filipevicentehidalgo</a> &bull; "
+        "GitHub: <a href='https://github.com/FilipeVicenteH' color='#0D9488'>github.com/FilipeVicenteH</a><br/>"
+        "Behance: <a href='https://www.behance.net/filipevicenteh' color='#0D9488'>behance.net/filipevicenteh</a> &bull; "
+        "Portfólio: <a href='https://filipevicenteh.vercel.app' color='#0D9488'>filipevicenteh.vercel.app</a>"
     )
     story.append(Paragraph(contact_text, contact_style))
     story.append(Spacer(1, 2))
@@ -201,8 +201,8 @@ def create_resume(output_filename):
     t_skills = Table(skills_data, colWidths=[150, 390])
     t_skills.setStyle(TableStyle([
         ('VALIGN', (0, 0), (-1, -1), 'TOP'),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 1.2),
-        ('TOPPADDING', (0, 0), (-1, -1), 1.2),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 1.0),
+        ('TOPPADDING', (0, 0), (-1, -1), 1.0),
         ('LEFTPADDING', (0, 0), (-1, -1), 0),
         ('RIGHTPADDING', (0, 0), (-1, -1), 0),
     ]))

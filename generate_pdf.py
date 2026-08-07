@@ -11,8 +11,8 @@ def create_resume(output_filename):
         pagesize=letter,
         leftMargin=32,
         rightMargin=32,
-        topMargin=20,
-        bottomMargin=20
+        topMargin=18,
+        bottomMargin=18
     )
 
     styles = getSampleStyleSheet()
@@ -39,8 +39,8 @@ def create_resume(output_filename):
         'HeaderTitle',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=9.0,
-        leading=11,
+        fontSize=8.8,
+        leading=10.5,
         textColor=SECONDARY_COLOR,
         alignment=TA_CENTER,
         spaceAfter=1
@@ -50,8 +50,8 @@ def create_resume(output_filename):
         'ContactInfo',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=7.8,
-        leading=10.0,
+        fontSize=7.6,
+        leading=9.8,
         textColor=TEXT_MUTED,
         alignment=TA_CENTER
     )
@@ -60,19 +60,19 @@ def create_resume(output_filename):
         'SectionHeading',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=9.5,
-        leading=11.5,
+        fontSize=9.2,
+        leading=11.0,
         textColor=PRIMARY_COLOR,
-        spaceBefore=4,
-        spaceAfter=2
+        spaceBefore=3,
+        spaceAfter=1
     )
 
     body_style = ParagraphStyle(
         'BodyDark',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.0,
-        leading=10.8,
+        fontSize=7.9,
+        leading=10.5,
         textColor=TEXT_DARK,
         alignment=TA_JUSTIFY
     )
@@ -81,8 +81,8 @@ def create_resume(output_filename):
         'JobTitle',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=8.6,
-        leading=10.6,
+        fontSize=8.5,
+        leading=10.5,
         textColor=PRIMARY_COLOR
     )
 
@@ -91,7 +91,7 @@ def create_resume(output_filename):
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
         fontSize=8.2,
-        leading=10.2,
+        leading=10.0,
         textColor=SECONDARY_COLOR
     )
 
@@ -99,8 +99,8 @@ def create_resume(output_filename):
         'JobPeriod',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=7.8,
-        leading=10.2,
+        fontSize=7.6,
+        leading=10.0,
         textColor=TEXT_MUTED,
         alignment=2 # Right
     )
@@ -109,8 +109,8 @@ def create_resume(output_filename):
         'BulletText',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=7.8,
-        leading=10.2,
+        fontSize=7.7,
+        leading=9.9,
         textColor=TEXT_DARK,
         leftIndent=9,
         firstLineIndent=-5,
@@ -121,8 +121,8 @@ def create_resume(output_filename):
         'SkillLabel',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=7.9,
-        leading=10.4,
+        fontSize=7.8,
+        leading=10.2,
         textColor=PRIMARY_COLOR
     )
 
@@ -130,8 +130,8 @@ def create_resume(output_filename):
         'SkillVal',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=7.9,
-        leading=10.4,
+        fontSize=7.8,
+        leading=10.2,
         textColor=TEXT_DARK
     )
 
@@ -152,20 +152,20 @@ def create_resume(output_filename):
     )
     story.append(Paragraph(contact_text, contact_style))
     story.append(Spacer(1, 1))
-    story.append(HRFlowable(width="100%", thickness=1, color=PRIMARY_COLOR, spaceBefore=1, spaceAfter=3))
+    story.append(HRFlowable(width="100%", thickness=1, color=PRIMARY_COLOR, spaceBefore=1, spaceAfter=2))
 
     # 2. RESUMO PROFISSIONAL
     story.append(Paragraph("RESUMO PROFISSIONAL", section_heading_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=LINE_COLOR, spaceBefore=1, spaceAfter=2))
     summary_p = (
-        "Profissional híbrido com formação em <b>Ciência da Computação</b> e <b>Design Gráfico</b>, combinando experiência prática no "
+        "Profissional híbrido com formação em <b>Ciência da Computação</b> e <b>Design Gráfico</b>, unindo experiência prática no "
         "desenvolvimento Front-End de aplicações SaaS (React, Next.js 15, TypeScript), arquitetura de integração de APIs/Webhooks, "
         "atendimento técnico de <b>Suporte N1/N2</b> (troubleshooting HTTP, logs, Postman) e <b>Customer Success (CS)</b>. "
         "Criador da plataforma <b>UnicoCRM</b> (retenção e reconversão de churn) e autor do <b>Redesign Visual de 30 interfaces</b> "
         "da plataforma UnicoDrop. Habilidade em diagnosticar a causa-raiz de falhas técnicas e convertê-las em melhorias de software e valor ao cliente."
     )
     story.append(Paragraph(summary_p, body_style))
-    story.append(Spacer(1, 3))
+    story.append(Spacer(1, 2))
 
     # 3. HABILIDADES TÉCNICAS
     story.append(Paragraph("HABILIDADES TÉCNICAS", section_heading_style))
@@ -182,11 +182,11 @@ def create_resume(output_filename):
         ],
         [
             Paragraph("<b>Suporte Técnico N2:</b>", skill_label_style),
-            Paragraph("Troubleshooting avançado, análise de logs HTTP (Postman, Insomnia, cURL), Status Codes (4xx/5xx), gestão de chamados (SLA), suporte remoto", skill_val_style)
+            Paragraph("Troubleshooting avançado, depuração de logs HTTP (Postman, Insomnia, cURL), Status Codes (4xx/5xx), gestão de chamados (SLA), suporte remoto", skill_val_style)
         ],
         [
             Paragraph("<b>Customer Success & CS:</b>", skill_label_style),
-            Paragraph("Onboarding técnico de lojistas, análise de churn/MRR, estratégias de retenção, treinamentos operacionais, dashboards em Power BI e Excel", skill_val_style)
+            Paragraph("Onboarding técnico de lojistas, análise de churn/MRR, estratégias de retenção, suporte a parâmetros de gateway/frete, dashboards em Power BI e Excel", skill_val_style)
         ],
         [
             Paragraph("<b>Plataformas & Automação:</b>", skill_label_style),
@@ -207,10 +207,10 @@ def create_resume(output_filename):
         ('RIGHTPADDING', (0, 0), (-1, -1), 0),
     ]))
     story.append(t_skills)
-    story.append(Spacer(1, 3))
+    story.append(Spacer(1, 2))
 
-    # 4. PROJETOS DE ENGENHARIA & SAAS EM DESTAQUE
-    story.append(Paragraph("PROJETOS DE ENGENHARIA & SAAS EM DESTAQUE", section_heading_style))
+    # 4. PROJETOS DE SOFTWARE & SISTEMAS SAAS
+    story.append(Paragraph("PROJETOS DE SOFTWARE & SISTEMAS SAAS", section_heading_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=LINE_COLOR, spaceBefore=1, spaceAfter=2))
 
     projects_list = [
@@ -230,7 +230,7 @@ def create_resume(output_filename):
     ]
     for proj_item in projects_list:
         story.append(Paragraph(f"&bull; {proj_item}", bullet_style))
-    story.append(Spacer(1, 3))
+    story.append(Spacer(1, 2))
 
     # 5. HISTÓRICO PROFISSIONAL
     story.append(Paragraph("HISTÓRICO PROFISSIONAL", section_heading_style))
@@ -256,8 +256,8 @@ def create_resume(output_filename):
     story.append(Spacer(1, 1))
 
     j1_bullets = [
-        "<b>Atendimento de Suporte Técnico N2 & Troubleshooting:</b> Diagnosticai e resolvi chamados técnicos de alta complexidade, utilizando <b>Postman, Insomnia e cURL</b> para inspecionar requisições HTTP, logs de API e payloads JSON. Resolução de falhas em instâncias de mensageria e sincronização de pedidos com plataformas como <b>Shopify e Nuvemshop</b>, garantindo baixa taxa de reincidência e SLA reduzido.",
-        "<b>Customer Success (CS) & Onboarding Técnico:</b> Conduzi o processo de onboarding técnico inicial de novos lojistas (configuração de domínios, Pixels de conversão, tabelas de frete e taxas), treinamento de equipes, acompanhamento de satisfação e elaboração de relatórios estratégicos operacionais em Power BI."
+        "<b>Suporte Técnico N2 & Troubleshooting de Integrações:</b> Diagnosticai e resolvi chamados técnicos de alta complexidade (N2), realizando a depuração detalhada de payloads JSON, logs de requisições HTTP via <b>Postman, Insomnia e cURL</b> e verificação de Status Codes (4xx/5xx). Atuação direta na análise de instâncias de mensageria (WhatsApp QR Code / SMS) e sincronização de pedidos e estoques com e-commerces (<b>Shopify e Nuvemshop</b>), garantindo baixa taxa de reincidência e SLA reduzido.",
+        "<b>Customer Success (CS) & Onboarding Técnico de Lojistas:</b> Responsável pelo onboarding técnico de novos clientes da plataforma, auxiliando na parametrização de domínios customizados, Pixels de conversão, tabelas de frete e taxas de gateway. Acompanhamento ativo da retenção de contas, prevenção de churn e elaboração de dashboards operacionais estratégicos em Power BI para suporte às tomadas de decisão."
     ]
     for bullet in j1_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))

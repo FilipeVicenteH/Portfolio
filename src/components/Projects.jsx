@@ -14,12 +14,12 @@ const projects = [
     result: 'Estruturação e padronização do processo de suporte e reconversão de cancelamentos, elevando a transparência das operações em tempo real, permitindo a recuperação ativa de clientes e fornecendo à gestão dados precisos para redução da taxa de churn.',
     tags: ['Next.js 15', 'TypeScript', 'Neon PostgreSQL', 'Prisma ORM', 'Tailwind CSS', 'Recharts', 'SaaS Full Stack'],
     github: 'https://github.com/FilipeVicenteH/UnicoDrop-Cancelados',
-    demo: 'https://unico-crm.vercel.app',
+    demo: 'https://unico-crm.vercel.app/relatorios',
     featured: true,
   },
   {
     title: 'Redesign Visual de Interface — Plataforma UnicoDrop',
-    subtitle: 'Modernização de UI/UX, Design System e Componentização Frontend em React',
+    subtitle: 'Página de Apresentação de Case Study UI/UX, Design System e Componentes Criados',
     images: [
       { url: '/projects/telas_ranking_real.jpg', label: 'Dashboard Executivo & Ranking de Produtos' },
       { url: '/projects/telas_rastreio_real.jpg', label: 'Módulo de Lista de Rastreio & Logística' }

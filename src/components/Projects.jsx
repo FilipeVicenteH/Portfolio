@@ -14,7 +14,7 @@ const projects = [
     result: 'Estruturação e padronização do processo de suporte e reconversão de cancelamentos, elevando a transparência das operações em tempo real, permitindo a recuperação ativa de clientes e fornecendo à gestão dados precisos para redução da taxa de churn.',
     tags: ['Next.js 15', 'TypeScript', 'Neon PostgreSQL', 'Prisma ORM', 'Tailwind CSS', 'Recharts', 'SaaS Full Stack'],
     github: 'https://github.com/FilipeVicenteH/UnicoDrop-Cancelados',
-    demo: 'https://unicocrm.vercel.app',
+    demo: 'https://unico-crm.vercel.app',
     featured: true,
   },
   {

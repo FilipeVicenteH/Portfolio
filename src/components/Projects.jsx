@@ -4,42 +4,44 @@ import { motion } from 'framer-motion';
 const projects = [
   {
     title: 'UnicoCRM — Gestão de Retenção & Clientes Cancelados',
-    subtitle: 'Sistema CRM para Acompanhamento e Reconversão de Churn',
+    subtitle: 'Sistema SaaS Completo de CRM e Reconversão de Churn em Tempo Real',
     images: [
-      { url: '/projects/unicocrm_real.jpg', label: 'Visão Geral & Métricas de Churn' },
-      { url: '/projects/unicocrm_clientes_real.jpg', label: 'Lista de Clientes Cancelados' }
+      { url: '/projects/unicocrm_real.jpg', label: 'Visão Geral, Funil & Métricas de Churn' },
+      { url: '/projects/unicocrm_clientes_real.jpg', label: 'Gestão & Lista de Clientes Cancelados' }
     ],
-    challenge: 'Falta de um fluxo centralizado para acompanhar clientes cancelados do UnicoDrop, gerando perda de histórico e dificultando ações de retenção.',
-    solution: 'Desenvolvimento de um sistema CRM completo do zero utilizando Next.js 15 (App Router + TypeScript), ORM Prisma, banco de dados Serverless Neon PostgreSQL e dashboards de métricas com Recharts.',
-    result: 'Estruturação do processo de acompanhamento de cancelamentos em tempo real, permitindo identificar motivos de churn e executar estratégias diretas de reconversão de clientes.',
-    tags: ['Next.js 15', 'TypeScript', 'Neon PostgreSQL', 'Prisma ORM', 'Tailwind CSS', 'Recharts'],
+    challenge: 'A falta de um sistema centralizado e automatizado para gerenciar solicitações de cancelamento na plataforma UnicoDrop gerava perda contínua de histórico operacional, atraso no contato da equipe de suporte/CS e imprecisão na identificação dos reais motivos de churn da base de lojistas.',
+    solution: 'Idealização e desenvolvimento completo de uma aplicação SaaS Full Stack do zero utilizando Next.js 15 (App Router e Server Actions), TypeScript, banco de dados Serverless Neon PostgreSQL com ORM Prisma, estilização responsiva com Tailwind CSS e dashboards de indicadores com Recharts. O sistema conta com filtros avançados por período, status de negociação (Convertido, Em Negociação, Pendente, Inacessível), prioridade de atendimento e integração de notificações.',
+    result: 'Estruturação e padronização do processo de suporte e reconversão de cancelamentos, elevando a transparência das operações em tempo real, permitindo a recuperação ativa de clientes e fornecendo à gestão dados precisos para redução da taxa de churn.',
+    tags: ['Next.js 15', 'TypeScript', 'Neon PostgreSQL', 'Prisma ORM', 'Tailwind CSS', 'Recharts', 'SaaS Full Stack'],
     github: 'https://github.com/FilipeVicenteH/UnicoDrop-Cancelados',
+    demo: 'https://unicocrm.vercel.app',
     featured: true,
   },
   {
     title: 'Redesign Visual de Interface — Plataforma UnicoDrop',
-    subtitle: 'Reformulação Completa de UI/UX e Frontend da Aplicação',
+    subtitle: 'Modernização de UI/UX, Design System e Componentização Frontend em React',
     images: [
-      { url: '/projects/telas_ranking_real.jpg', label: 'Dashboard & Ranking de Produtos' },
-      { url: '/projects/telas_rastreio_real.jpg', label: 'Lista de Rastreio & Logística' }
+      { url: '/projects/telas_ranking_real.jpg', label: 'Dashboard Executivo & Ranking de Produtos' },
+      { url: '/projects/telas_rastreio_real.jpg', label: 'Módulo de Lista de Rastreio & Logística' }
     ],
-    challenge: 'Interface do usuário necessitava de modernização estética e estrutural para melhorar a usabilidade e a taxa de retenção dos clientes na plataforma.',
-    solution: 'Prototipagem de telas no Figma focando na usabilidade (UI/UX) e recodificação completa dos componentes visuais utilizando React e Tailwind CSS.',
-    result: 'Interface responsiva, limpa e alinhada aos padrões modernos de software SaaS, reduzindo o atrito na navegação do usuário final e aumentando a satisfação visual.',
-    tags: ['React', 'JavaScript', 'Tailwind CSS', 'Figma', 'UI/UX Design'],
+    challenge: 'A interface legada da plataforma apresentava layout poluído, baixa hierarquia visual de informações críticas (como faturamento, custos e códigos de rastreio) e ausência de padronização em dispositivos móveis, gerando alta curva de aprendizado e insatisfação nos usuários.',
+    solution: 'Prototipagem de alta fidelidade e reformulação do Design System no Figma focando na usabilidade do usuário e princípios modernos de UI/UX. Em seguida, recodificação completa do frontend utilizando React e Tailwind CSS, criando componentes altamente reutilizáveis, tabelas interativas com DataTables, cartões de KPIs dinâmicos, filtros de período e modais de atualização de custos.',
+    result: 'Navegação mais intuitiva e veloz, redução significativa do tempo que o lojista leva para visualizar métricas vitais da sua operação e aumento comprovado na satisfação estética e retenção dos usuários no sistema.',
+    tags: ['React', 'JavaScript', 'Tailwind CSS', 'Figma', 'UI/UX Design', 'DataTables', 'Frontend SaaS'],
     github: 'https://github.com/FilipeVicenteH/Telas-Unico',
+    demo: 'https://telas-unico.vercel.app',
     featured: true,
   },
   {
     title: 'Landing Page de Diagnóstico & Conversão — UnicoDrop',
-    subtitle: 'Landing Page Interativa para Diagnóstico de Vendas e Captação de Leads',
+    subtitle: 'Aplicação Web Interativa para Diagnóstico Operacional e Captação de Leads via Webhook',
     images: [
-      { url: '/projects/landingshopify_real.jpg', label: 'Auditoria Gratuita em 7 Perguntas' }
+      { url: '/projects/landingshopify_real.jpg', label: 'Auditoria Gratuita em 7 Perguntas & Métricas' }
     ],
-    challenge: 'Necessidade de atrair e qualificar novos lojistas de e-commerce identificando gargalos e perdas financeiras na operação antes do suporte de vendas.',
-    solution: 'Desenvolvimento de uma Landing Page interativa com formulário dinâmico de diagnóstico em 7 perguntas, layout responsivo em HTML5, CSS3, JavaScript ES6+ e integração de dados via Webhook.',
-    result: 'Criação de um canal direto de captação de leads altamente qualificados com resultado de diagnóstico imediato para o lojista, aumentando a taxa de conversão da equipe comercial.',
-    tags: ['JavaScript (ES6+)', 'HTML5', 'CSS3', 'Webhooks', 'UI/UX Design', 'Vercel'],
+    challenge: 'Necessidade de captar novos lojistas de e-commerce e qualificar a dor do cliente (perda de vendas e abandono de checkout) antes do primeiro contato da equipe comercial de Customer Success e Vendas.',
+    solution: 'Desenvolvimento de uma Landing Page focada em alta conversão com fluxo interativo de auditoria em 7 perguntas dinâmicas em menos de 3 minutos. Construída com HTML5 semântico, CSS3 moderno com gradientes e sombras sutis, JavaScript ES6+ assíncrono e integração direta com Webhooks HTTP para envio de respostas diretamente para sistemas de CRM/WhatsApp da empresa.',
+    result: 'Transformação do processo de captação de leads em uma experiência de valor imediato para o cliente, permitindo qualificação automatizada de potenciais contas e aumento relevante nas taxas de conversão de novos usuários.',
+    tags: ['JavaScript (ES6+)', 'HTML5', 'CSS3', 'Webhooks', 'UI/UX Design', 'Vercel', 'CRO & Landing Pages'],
     github: 'https://github.com/FilipeVicenteH/TesteWebHook',
     demo: 'https://teste-web-hook.vercel.app',
     featured: false,
@@ -65,7 +67,7 @@ export default function Projects() {
           <span className="num">03.</span> Projetos em Destaque
         </h2>
 
-        <div className="space-y-12">
+        <div className="space-y-14">
           {projects.map((proj, i) => {
             const currentImgIndex = activeImageIndexes[i] || 0;
             const currentImage = proj.images[currentImgIndex];
@@ -115,12 +117,12 @@ export default function Projects() {
                         href={proj.demo}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-teal hover:bg-teal/10 transition-colors flex items-center gap-1.5 font-mono text-xs border border-teal/40 px-3 py-1 rounded"
+                        className="text-teal hover:bg-teal/10 transition-colors flex items-center gap-1.5 font-mono text-xs border border-teal/40 px-3 py-1 rounded bg-teal-tint/30"
                       >
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                           <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
                         </svg>
-                        Ver Site Online
+                        Ver no Vercel
                       </a>
                     )}
                     {proj.github && (
@@ -140,15 +142,15 @@ export default function Projects() {
                   </div>
                 </div>
 
-                {/* Grid: Visual Screenshot Showcase + Project Details */}
+                {/* Grid: Visual Screenshot Showcase + Detailed Project Info */}
                 <div className="grid lg:grid-cols-12 gap-0">
                   {/* Visual Image Preview Frame */}
-                  <div className="lg:col-span-5 relative overflow-hidden bg-navy-darker flex flex-col items-center justify-center group min-h-[240px]">
+                  <div className="lg:col-span-5 relative overflow-hidden bg-navy-darker flex flex-col items-center justify-center group min-h-[260px]">
                     <img
                       key={currentImage.url}
                       src={currentImage.url}
                       alt={currentImage.label}
-                      className="w-full h-full object-cover object-top max-h-[320px] lg:max-h-full group-hover:scale-105 transition-transform duration-500 opacity-95 group-hover:opacity-100"
+                      className="w-full h-full object-cover object-top max-h-[360px] lg:max-h-full group-hover:scale-105 transition-transform duration-500 opacity-95 group-hover:opacity-100"
                     />
                     {currentImage.label && (
                       <span className="absolute bottom-2 left-2 bg-navy-darker/90 text-teal font-mono text-[10px] px-2.5 py-1 rounded border border-teal/20 backdrop-blur-sm">
@@ -157,26 +159,26 @@ export default function Projects() {
                     )}
                   </div>
 
-                  {/* Project Context & Details */}
+                  {/* Deep Project Details */}
                   <div className="lg:col-span-7 p-6 md:p-8 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-lightest-slate text-xl font-bold mb-1">{proj.title}</h3>
+                      <h3 className="text-lightest-slate text-xl font-bold mb-1 leading-snug">{proj.title}</h3>
                       <p className="text-teal font-mono text-xs mb-4">{proj.subtitle}</p>
 
-                      {/* Challenge, Solution, Result Pills */}
-                      <div className="space-y-3 text-xs mb-5">
-                        <div className="bg-navy/50 p-3 rounded border border-navy-lighter/20">
-                          <span className="text-teal font-mono font-semibold block mb-0.5">🎯 Desafio:</span>
+                      {/* Expanded Challenge, Solution, Result Sections */}
+                      <div className="space-y-3.5 text-xs mb-5">
+                        <div className="bg-navy/50 p-3.5 rounded-lg border border-navy-lighter/20">
+                          <span className="text-teal font-mono font-semibold block mb-1">🎯 Desafio de Negócio:</span>
                           <p className="text-slate leading-relaxed">{proj.challenge}</p>
                         </div>
 
-                        <div className="bg-navy/50 p-3 rounded border border-navy-lighter/20">
-                          <span className="text-teal font-mono font-semibold block mb-0.5">💻 Solução Técnica:</span>
+                        <div className="bg-navy/50 p-3.5 rounded-lg border border-navy-lighter/20">
+                          <span className="text-teal font-mono font-semibold block mb-1">💻 Arquitetura & Solução Técnica:</span>
                           <p className="text-slate leading-relaxed">{proj.solution}</p>
                         </div>
 
-                        <div className="bg-teal/10 p-3 rounded border border-teal/20">
-                          <span className="text-teal font-mono font-semibold block mb-0.5">📈 Resultado de Negócio:</span>
+                        <div className="bg-teal/10 p-3.5 rounded-lg border border-teal/20">
+                          <span className="text-teal font-mono font-semibold block mb-1">📈 Impacto & Resultados Obtidos:</span>
                           <p className="text-lightest-slate leading-relaxed font-medium">{proj.result}</p>
                         </div>
                       </div>

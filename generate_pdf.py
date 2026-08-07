@@ -154,13 +154,13 @@ def create_resume(output_filename):
     story.append(Spacer(1, 1))
     story.append(HRFlowable(width="100%", thickness=1, color=PRIMARY_COLOR, spaceBefore=1, spaceAfter=2))
 
-    # 2. RESUMO PROFISSIONAL (OPÇÃO 1 HUMANIZADA)
+    # 2. RESUMO PROFISSIONAL (100% HUMANIZADO)
     story.append(Paragraph("RESUMO PROFISSIONAL", section_heading_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=LINE_COLOR, spaceBefore=1, spaceAfter=2))
     summary_p = (
-        "<b>Desenvolvedor Front-End e Analista de Suporte Técnico (N1/N2)</b> com formação em <b>Ciência da Computação</b> e <b>Design Gráfico</b>. "
+        "<b>Desenvolvedor Front-End e Analista de Suporte Técnico N2</b> com formação em <b>Ciência da Computação</b> e <b>Design Gráfico</b>. "
         "Atuação focada no desenvolvimento de interfaces SaaS (React, Next.js 15, TypeScript), integrações via APIs/Webhooks e resolução de chamados "
-        "de alta complexidade com análise de logs (Postman/cURL). Criador da aplicação <b>UnicoCRM</b> para gestão de retenção e reconversão de clientes "
+        "N2 de alta complexidade com análise de logs (Postman/cURL). Criador da aplicação <b>UnicoCRM</b> para gestão de retenção e reconversão de clientes "
         "cancelados, e responsável pelo <b>Redesign Visual de 30 interfaces</b> da plataforma UnicoDrop. Experiência prática em Customer Success, "
         "onboarding de lojistas e sustentação de sistemas."
     )
@@ -225,7 +225,7 @@ def create_resume(output_filename):
         "<i>Resultado: eliminação de poluição visual e redução estimada em 40% no tempo de localização de informações operacionais pelos lojistas.</i>",
 
         "<b>UnicoDrop Diagnóstico &ndash; Landing Page & Captação via Webhook (<a href='https://teste-web-hook.vercel.app' color='#0D9488'>teste-web-hook.vercel.app</a>):</b> "
-        "Projetai e codifiquei landing page responsiva de alta conversão com fluxo interativo em 7 perguntas dinâmicas de auditoria, construída com <b>HTML5, CSS3, JavaScript ES6+ assíncrono e Webhooks HTTP</b>. "
+        "Projetei e codifiquei landing page responsiva de alta conversão com fluxo interativo em 7 perguntas dinâmicas de auditoria, construída com <b>HTML5, CSS3, JavaScript ES6+ assíncrono e Webhooks HTTP</b>. "
         "Dispara payloads de leads qualificados em tempo real para o CRM/Vendas. <i>Resultado: eliminação de triagem manual e aceleração da entrada de novos e-commerces.</i>"
     ]
     for proj_item in projects_list:
@@ -256,7 +256,7 @@ def create_resume(output_filename):
     story.append(Spacer(1, 1))
 
     j1_bullets = [
-        "<b>Suporte Técnico N2 & Troubleshooting de Integrações:</b> Diagnosticai e resolvi chamados técnicos de alta complexidade (N2), realizando a depuração detalhada de payloads JSON, logs de requisições HTTP via <b>Postman, Insomnia e cURL</b> e verificação de Status Codes (4xx/5xx). Atuação direta na análise de instâncias de mensageria (WhatsApp QR Code / SMS) e sincronização de pedidos e estoques com e-commerces (<b>Shopify e Nuvemshop</b>), garantindo baixa taxa de reincidência e SLA reduzido.",
+        "<b>Suporte Técnico N2 & Troubleshooting de Integrações:</b> Diagnostiquei e resolvi chamados técnicos de alta complexidade (N2), realizando a depuração detalhada de payloads JSON, logs de requisições HTTP via <b>Postman, Insomnia e cURL</b> e verificação de Status Codes (4xx/5xx). Atuação direta na análise de instâncias de mensageria (WhatsApp QR Code / SMS) e sincronização de pedidos e estoques com e-commerces (<b>Shopify e Nuvemshop</b>), garantindo baixa taxa de reincidência e SLA reduzido.",
         "<b>Customer Success (CS) & Onboarding Técnico de Lojistas:</b> Responsável pelo onboarding técnico de novos clientes da plataforma, auxiliando na parametrização de domínios customizados, Pixels de conversão, tabelas de frete e taxas de gateway. Acompanhamento ativo da retenção de contas, prevenção de churn e elaboração de dashboards operacionais estratégicos em Power BI para suporte às tomadas de decisão."
     ]
     for bullet in j1_bullets:

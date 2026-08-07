@@ -11,8 +11,8 @@ def create_resume(output_filename):
         pagesize=letter,
         leftMargin=36,
         rightMargin=36,
-        topMargin=24,
-        bottomMargin=24
+        topMargin=22,
+        bottomMargin=22
     )
 
     styles = getSampleStyleSheet()
@@ -39,7 +39,7 @@ def create_resume(output_filename):
         'HeaderTitle',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=9.2,
+        fontSize=9.0,
         leading=11,
         textColor=SECONDARY_COLOR,
         alignment=TA_CENTER,
@@ -71,8 +71,8 @@ def create_resume(output_filename):
         'BodyDark',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.2,
-        leading=11.0,
+        fontSize=8.1,
+        leading=10.9,
         textColor=TEXT_DARK,
         alignment=TA_JUSTIFY
     )
@@ -109,8 +109,8 @@ def create_resume(output_filename):
         'BulletText',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.0,
-        leading=10.4,
+        fontSize=7.9,
+        leading=10.3,
         textColor=TEXT_DARK,
         leftIndent=10,
         firstLineIndent=-6,
@@ -121,8 +121,8 @@ def create_resume(output_filename):
         'SkillLabel',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=8.0,
-        leading=10.8,
+        fontSize=7.9,
+        leading=10.6,
         textColor=PRIMARY_COLOR
     )
 
@@ -130,8 +130,8 @@ def create_resume(output_filename):
         'SkillVal',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.0,
-        leading=10.8,
+        fontSize=7.9,
+        leading=10.6,
         textColor=TEXT_DARK
     )
 
@@ -160,9 +160,9 @@ def create_resume(output_filename):
     summary_p = (
         "Profissional híbrido com sólida formação acadêmica em <b>Ciência da Computação</b> e <b>Design Gráfico</b>, com experiência "
         "comprovada no desenvolvimento Front-End de aplicações web (React, Next.js 15, TypeScript), engenharia de integrações via APIs/Webhooks, "
-        "atendimento técnico de <b>Suporte N1/N2</b> e <b>Customer Success (CS)</b>. Criador da plataforma SaaS <b>UnicoCRM</b> "
-        "(gestão de retenção e reconversão de churn) e responsável pelo redesign visual de 30 interfaces da plataforma UnicoDrop. "
-        "Habilidade em transformar chamados técnicos e demandas de suporte em soluções definitivas de software e melhorias de UX."
+        "atendimento técnico de <b>Suporte N1/N2</b> (troubleshooting de requisições HTTP, logs, Postman) e <b>Customer Success (CS)</b>. "
+        "Criador da plataforma SaaS <b>UnicoCRM</b> (retenção e reconversão de churn) e responsável pelo redesign visual de 30 interfaces "
+        "da plataforma UnicoDrop. Habilidade em transformar chamados técnicos e demandas de suporte em soluções definitivas de software e melhorias de UX."
     )
     story.append(Paragraph(summary_p, body_style))
     story.append(Spacer(1, 3))
@@ -174,7 +174,7 @@ def create_resume(output_filename):
     skills_data = [
         [
             Paragraph("<b>Front-End & UI/UX:</b>", skill_label_style),
-            Paragraph("HTML5, CSS3, JavaScript (ES6+), React, Next.js 15, TypeScript, Tailwind, Figma, Responsive Design", skill_val_style)
+            Paragraph("HTML5, CSS3, JavaScript (ES6+), React, Next.js 15, TypeScript, Tailwind CSS, Bootstrap, Figma, Responsive Design", skill_val_style)
         ],
         [
             Paragraph("<b>Back-End & APIs:</b>", skill_label_style),
@@ -182,11 +182,11 @@ def create_resume(output_filename):
         ],
         [
             Paragraph("<b>Suporte Técnico N2:</b>", skill_label_style),
-            Paragraph("Troubleshooting avançado, análise de logs, payloads de APIs/Webhooks, Helpdesk, redução de SLA, suporte remoto", skill_val_style)
+            Paragraph("Troubleshooting avançado, análise de logs HTTP (Postman, Insomnia, cURL), payloads JSON, Status Codes (4xx/5xx), gestão de chamados (SLA), suporte remoto", skill_val_style)
         ],
         [
             Paragraph("<b>Customer Success & Onboarding:</b>", skill_label_style),
-            Paragraph("Onboarding técnico de clientes, gestão de churn, retenção de contas, relatórios operacionais (Power BI/Excel)", skill_val_style)
+            Paragraph("Onboarding técnico de lojistas, gestão de churn, retenção de contas, análise de métricas operacionais (Power BI, Excel)", skill_val_style)
         ],
         [
             Paragraph("<b>Plataformas & Automação:</b>", skill_label_style),
@@ -233,11 +233,11 @@ def create_resume(output_filename):
     story.append(Spacer(1, 1.5))
 
     j1_bullets = [
-        "<b>Projeto UnicoCRM (Full-Stack SaaS):</b> Idealizei e construí do zero uma aplicação web completa (Next.js 15, TypeScript, Tailwind, Prisma, Neon PostgreSQL) para acompanhamento de retenção e reconversão de clientes cancelados. <i>Resultado: centralização do histórico de atendimento, análise dos motivos de churn e recuperação direta de receita (MRR).</i>",
-        "<b>Projeto UnicoDrop Redesign Visual (30 Interfaces):</b> Reformulei visualmente 30 telas operacionais (React, Tailwind, Figma) incluindo dashboards de vendas (Facebook/Google Ads), rastreio e DRE financeiro. <i>Resultado: otimização da experiência dos lojistas e diminuição estimada em 40% no tempo de localização de informações.</i>",
-        "<b>Projeto Landing Page Diagnóstico Webhook:</b> Desenvolvi landing page de conversão com formulário dinâmico integrado via Webhook para pré-qualificação de clientes. <i>Resultado: automação da captura de leads e agilidade na entrada de novos e-commerces na plataforma.</i>",
-        "<b>Atendimento de Suporte N2 & Troubleshooting:</b> Atuação direta em incidentes de maior complexidade, analisando requisições JSON, instâncias de automação de WhatsApp/SMS e integridade de APIs com plataformas como Shopify e Nuvemshop, garantindo baixa taxa de reincidência e SLA reduzido.",
-        "<b>Customer Success & Onboarding Técnico:</b> Condução do processo de onboarding de novos lojistas, suporte na configuração de domínios e taxas, treinamentos da ferramenta e elaboração de relatórios estratégicos para apoiar o crescimento e a retenção da carteira de clientes."
+        "<b>Projeto UnicoCRM (Full-Stack SaaS):</b> Idealizei e desenvolvi do zero uma aplicação web completa (Next.js 15, TypeScript, Tailwind, Prisma, Neon PostgreSQL) para acompanhamento de retenção e reconversão de clientes cancelados. <i>Resultado: centralização do histórico de atendimento, análise dos motivos de churn e recuperação direta de receita (MRR).</i>",
+        "<b>Projeto UnicoDrop Redesign Visual (30 Interfaces):</b> Reformulei visualmente 30 telas operacionais (React, Tailwind, Figma) incluindo dashboards de vendas (Facebook/Google Ads), rastreio e DRE financeiro. <i>Resultado: otimização da usabilidade dos lojistas e diminuição estimada em 40% no tempo de localização de informações.</i>",
+        "<b>Projeto Landing Page Diagnóstico Webhook:</b> Projetai e codifiquei landing page de alta conversão com formulário dinâmico integrado via Webhook/API REST. <i>Resultado: automação da captura de leads e agilidade na entrada de novos e-commerces na plataforma.</i>",
+        "<b>Atendimento de Suporte N2 & Troubleshooting:</b> Diagnosticai e resolvi chamados técnicos de alta complexidade (N2), investigando falhas em payloads JSON, logs de requisições via Postman/cURL e estabilidade de Webhooks com e-commerces (Shopify/Nuvemshop), garantindo baixa taxa de reincidência e SLA reduzido.",
+        "<b>Customer Success & Onboarding Técnico:</b> Conduzi o processo de onboarding técnico de novos lojistas, orientei a configuração de domínios, Pixels e taxas, e elaborei relatórios estratégicos para apoiar a retenção e o crescimento da carteira de clientes."
     ]
     for bullet in j1_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))
@@ -263,9 +263,9 @@ def create_resume(output_filename):
     story.append(Spacer(1, 1.5))
 
     j2_bullets = [
-        "Desenvolvimento de landing pages focadas em alta conversão e divulgação de produtos digitais e físicos.",
-        "Criação de identidade visual, peças publicitárias e banners promocionais utilizando Photoshop, Illustrator e Figma.",
-        "Gestão de catálogos e suporte operacional para e-commerce, garantindo consistência na apresentação dos produtos."
+        "Desenvolvi landing pages focadas em alta conversão e divulgação de produtos digitais e físicos.",
+        "Criei identidades visuais, peças publicitárias e banners promocionais utilizando Photoshop, Illustrator e Figma.",
+        "Gerenciei catálogos e prestei suporte operacional para e-commerce, garantindo consistência na apresentação dos produtos."
     ]
     for bullet in j2_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))
@@ -291,8 +291,8 @@ def create_resume(output_filename):
     story.append(Spacer(1, 1.5))
 
     j3_bullets = [
-        "Atendimento direto ao público e suporte a usuários na conferência e processamento de documentos corporativos em alto volume.",
-        "Organização de fluxos e dados cadastrais em sistemas internos, garantindo precisão e conformidade com requisitos operacionais."
+        "Prestei atendimento direto ao público e suporte técnico na conferência e processamento de documentos corporativos em alto volume.",
+        "Organizei fluxos de trabalho e registros cadastrais em sistemas internos, garantindo precisão e conformidade operacional."
     ]
     for bullet in j3_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))

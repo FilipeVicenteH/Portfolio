@@ -154,15 +154,15 @@ def create_resume(output_filename):
     story.append(Spacer(1, 1))
     story.append(HRFlowable(width="100%", thickness=1, color=PRIMARY_COLOR, spaceBefore=1, spaceAfter=2))
 
-    # 2. RESUMO PROFISSIONAL
+    # 2. RESUMO PROFISSIONAL (OPÇÃO 1 HUMANIZADA)
     story.append(Paragraph("RESUMO PROFISSIONAL", section_heading_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=LINE_COLOR, spaceBefore=1, spaceAfter=2))
     summary_p = (
-        "Profissional híbrido com formação em <b>Ciência da Computação</b> e <b>Design Gráfico</b>, unindo experiência prática no "
-        "desenvolvimento Front-End de aplicações SaaS (React, Next.js 15, TypeScript), arquitetura de integração de APIs/Webhooks, "
-        "atendimento técnico de <b>Suporte N1/N2</b> (troubleshooting HTTP, logs, Postman) e <b>Customer Success (CS)</b>. "
-        "Criador da plataforma <b>UnicoCRM</b> (retenção e reconversão de churn) e autor do <b>Redesign Visual de 30 interfaces</b> "
-        "da plataforma UnicoDrop. Habilidade em diagnosticar a causa-raiz de falhas técnicas e convertê-las em melhorias de software e valor ao cliente."
+        "<b>Desenvolvedor Front-End e Analista de Suporte Técnico (N1/N2)</b> com formação em <b>Ciência da Computação</b> e <b>Design Gráfico</b>. "
+        "Atuação focada no desenvolvimento de interfaces SaaS (React, Next.js 15, TypeScript), integrações via APIs/Webhooks e resolução de chamados "
+        "de alta complexidade com análise de logs (Postman/cURL). Criador da aplicação <b>UnicoCRM</b> para gestão de retenção e reconversão de clientes "
+        "cancelados, e responsável pelo <b>Redesign Visual de 30 interfaces</b> da plataforma UnicoDrop. Experiência prática em Customer Success, "
+        "onboarding de lojistas e sustentação de sistemas."
     )
     story.append(Paragraph(summary_p, body_style))
     story.append(Spacer(1, 2))

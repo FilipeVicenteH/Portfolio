@@ -238,10 +238,10 @@ def create_resume(output_filename):
     j1_bullets = [
         "Idealizei e desenvolvi o UnicoCRM (Next.js 15, TypeScript, Prisma, Neon PostgreSQL) para automação e reconversão de clientes cancelados.",
         "Liderei a reformulação visual de UI/UX (React, Tailwind CSS, Figma) da plataforma UnicoDrop, otimizando a usabilidade do usuário.",
+        "Desenvolvi Landing Page interativa de diagnóstico com formulário dinâmico e integração via Webhook para captação de novos clientes.",
         "Investigo e corrijo falhas em integrações via API e Webhooks entre a plataforma e lojas virtuais (Shopify, Nuvemshop).",
         "Configuro automações de disparo de mensagens (WhatsApp/E-mail) e realizo atendimento técnico N1/N2 com redução de SLA.",
-        "Conduzo o onboarding de novos clientes e atuo em Customer Success, garantindo a retenção e adoção contínua do sistema.",
-        "Construo dashboards gerenciais (Power BI, Recharts) para monitoramento de métricas operacionais e taxas de churn."
+        "Conduzo o onboarding de novos clientes e atuo em Customer Success com suporte à criação de relatórios operacionais."
     ]
     for bullet in j1_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))

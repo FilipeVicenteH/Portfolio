@@ -6,7 +6,7 @@ const projects = [
     title: 'UnicoCRM — Gestão de Retenção & Clientes Cancelados',
     subtitle: 'Sistema CRM para Acompanhamento e Reconversão de Churn',
     images: [
-      { url: '/projects/unicocrm.jpg', label: 'Visão Geral & Métricas de Churn' },
+      { url: '/projects/unicocrm_real.jpg', label: 'Visão Geral & Métricas de Churn' },
       { url: '/projects/unicocrm_clientes_real.jpg', label: 'Lista de Clientes Cancelados' }
     ],
     challenge: 'Falta de um fluxo centralizado para acompanhar clientes cancelados do UnicoDrop, gerando perda de histórico e dificultando ações de retenção.',
@@ -20,8 +20,8 @@ const projects = [
     title: 'Redesign Visual de Interface — Plataforma UnicoDrop',
     subtitle: 'Reformulação Completa de UI/UX e Frontend da Aplicação',
     images: [
-      { url: '/projects/telasunico.jpg', label: 'Dashboard & Ranking de Produtos' },
-      { url: '/projects/telasunico_2.jpg', label: 'Lista de Rastreio & Logística' }
+      { url: '/projects/telas_ranking_real.jpg', label: 'Dashboard & Ranking de Produtos' },
+      { url: '/projects/telas_rastreio_real.jpg', label: 'Lista de Rastreio & Logística' }
     ],
     challenge: 'Interface do usuário necessitava de modernização estética e estrutural para melhorar a usabilidade e a taxa de retenção dos clientes na plataforma.',
     solution: 'Prototipagem de telas no Figma focando na usabilidade (UI/UX) e recodificação completa dos componentes visuais utilizando React e Tailwind CSS.',
@@ -31,16 +31,17 @@ const projects = [
     featured: true,
   },
   {
-    title: 'Painel & Análise de Dados Operacionais',
-    subtitle: 'Dashboards Integrados de Atendimento e Métricas de TI',
+    title: 'Landing Page de Diagnóstico & Conversão — UnicoDrop',
+    subtitle: 'Landing Page Interativa para Diagnóstico de Vendas e Captação de Leads',
     images: [
-      { url: '/projects/painelunico.jpg', label: 'Visão Geral de Desempenho & SLAs' }
+      { url: '/projects/landingshopify_real.jpg', label: 'Auditoria Gratuita em 7 Perguntas' }
     ],
-    challenge: 'Ausência de visão consolidada sobre volume de chamados N1/N2, tempo de atendimento (SLA) e recorrência de incidentes técnicos.',
-    solution: 'Construção de painel gerencial em React integrado com dashboards interativos em Power BI para monitoramento de dados operacionais.',
-    result: 'Tomada de decisão baseada em dados reais pela gestão, acelerando o diagnóstico de falhas em integrações e a eficiência no suporte técnico.',
-    tags: ['Power BI', 'React', 'SQL', 'Excel Intermediário', 'APIs'],
-    github: 'https://github.com/FilipeVicenteH/PainelUnico',
+    challenge: 'Necessidade de atrair e qualificar novos lojistas de e-commerce identificando gargalos e perdas financeiras na operação antes do suporte de vendas.',
+    solution: 'Desenvolvimento de uma Landing Page interativa com formulário dinâmico de diagnóstico em 7 perguntas, layout responsivo em HTML5, CSS3, JavaScript ES6+ e integração de dados via Webhook.',
+    result: 'Criação de um canal direto de captação de leads altamente qualificados com resultado de diagnóstico imediato para o lojista, aumentando a taxa de conversão da equipe comercial.',
+    tags: ['JavaScript (ES6+)', 'HTML5', 'CSS3', 'Webhooks', 'UI/UX Design', 'Vercel'],
+    github: 'https://github.com/FilipeVicenteH/TesteWebHook',
+    demo: 'https://teste-web-hook.vercel.app',
     featured: false,
   },
 ];
@@ -108,20 +109,35 @@ export default function Projects() {
                     </div>
                   )}
 
-                  {proj.github && (
-                    <a
-                      href={proj.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-slate hover:text-teal transition-colors flex items-center gap-1.5 font-mono text-xs bg-navy-lighter/30 px-3 py-1 rounded hover:bg-navy-lighter/50 ml-auto sm:ml-0"
-                    >
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
-                        <path d="M9 18c-4.51 2-5-2-7-2"/>
-                      </svg>
-                      Ver no GitHub
-                    </a>
-                  )}
+                  <div className="flex items-center gap-2 ml-auto sm:ml-0">
+                    {proj.demo && (
+                      <a
+                        href={proj.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-teal hover:bg-teal/10 transition-colors flex items-center gap-1.5 font-mono text-xs border border-teal/40 px-3 py-1 rounded"
+                      >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        Ver Site Online
+                      </a>
+                    )}
+                    {proj.github && (
+                      <a
+                        href={proj.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-slate hover:text-teal transition-colors flex items-center gap-1.5 font-mono text-xs bg-navy-lighter/30 px-3 py-1 rounded hover:bg-navy-lighter/50"
+                      >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                          <path d="M9 18c-4.51 2-5-2-7-2"/>
+                        </svg>
+                        GitHub
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 {/* Grid: Visual Screenshot Showcase + Project Details */}

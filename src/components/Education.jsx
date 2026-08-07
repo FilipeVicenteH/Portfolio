@@ -30,7 +30,7 @@ export default function Education() {
         transition={{ duration: 0.5 }}
       >
         <h2 className="section-heading">
-          <span className="num">04.</span> Formação
+          <span className="num">05.</span> Formação
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">

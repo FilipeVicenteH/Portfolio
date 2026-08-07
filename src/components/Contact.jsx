@@ -9,7 +9,7 @@ export default function Contact() {
         viewport={{ once: true, margin: '-100px' }}
         transition={{ duration: 0.5 }}
       >
-        <p className="font-mono text-teal text-sm mb-3">05. Próximo passo</p>
+        <p className="font-mono text-teal text-sm mb-3">06. Próximo passo</p>
         <h2 className="text-4xl md:text-5xl font-bold text-lightest-slate mb-5">
           Vamos conversar
         </h2>

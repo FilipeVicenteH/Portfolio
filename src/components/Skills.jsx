@@ -71,7 +71,7 @@ export default function Skills() {
         transition={{ duration: 0.5 }}
       >
         <h2 className="section-heading">
-          <span className="num">03.</span> Habilidades
+          <span className="num">04.</span> Habilidades
         </h2>
 
         <motion.div

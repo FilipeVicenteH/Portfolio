@@ -4,9 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 const navLinks = [
   { num: '01', label: 'Sobre', href: '#about' },
   { num: '02', label: 'Experiência', href: '#experience' },
-  { num: '03', label: 'Habilidades', href: '#skills' },
-  { num: '04', label: 'Formação', href: '#education' },
-  { num: '05', label: 'Contato', href: '#contact' },
+  { num: '03', label: 'Projetos', href: '#projects' },
+  { num: '04', label: 'Habilidades', href: '#skills' },
+  { num: '05', label: 'Formação', href: '#education' },
+  { num: '06', label: 'Contato', href: '#contact' },
 ];
 
 export default function Navbar() {

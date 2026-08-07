@@ -18,19 +18,19 @@ def create_resume(output_filename):
     styles = getSampleStyleSheet()
 
     # Color Palette
-    PRIMARY_COLOR = colors.HexColor('#0F172A')   # Navy
+    PRIMARY_COLOR = colors.HexColor('#0F172A')   # Slate Dark Navy
     SECONDARY_COLOR = colors.HexColor('#0D9488') # Teal Accent
-    TEXT_DARK = colors.HexColor('#334155')       # Slate dark
+    TEXT_DARK = colors.HexColor('#334155')       # Slate dark text
     TEXT_MUTED = colors.HexColor('#64748B')      # Slate muted
-    LINE_COLOR = colors.HexColor('#CBD5E1')      # Light border
+    LINE_COLOR = colors.HexColor('#CBD5E1')      # Border line
 
     # Styles
     title_style = ParagraphStyle(
         'NameTitle',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=19,
-        leading=21,
+        fontSize=18,
+        leading=20,
         textColor=PRIMARY_COLOR,
         alignment=TA_CENTER
     )
@@ -39,8 +39,8 @@ def create_resume(output_filename):
         'HeaderTitle',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=9.5,
-        leading=11.5,
+        fontSize=9.2,
+        leading=11,
         textColor=SECONDARY_COLOR,
         alignment=TA_CENTER,
         spaceAfter=2
@@ -50,8 +50,8 @@ def create_resume(output_filename):
         'ContactInfo',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.2,
-        leading=11,
+        fontSize=8.0,
+        leading=10.5,
         textColor=TEXT_MUTED,
         alignment=TA_CENTER
     )
@@ -60,10 +60,10 @@ def create_resume(output_filename):
         'SectionHeading',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=10,
-        leading=12,
+        fontSize=9.5,
+        leading=11.5,
         textColor=PRIMARY_COLOR,
-        spaceBefore=5,
+        spaceBefore=4,
         spaceAfter=2
     )
 
@@ -71,8 +71,8 @@ def create_resume(output_filename):
         'BodyDark',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.5,
-        leading=11.5,
+        fontSize=8.3,
+        leading=11.2,
         textColor=TEXT_DARK,
         alignment=TA_JUSTIFY
     )
@@ -81,8 +81,8 @@ def create_resume(output_filename):
         'JobTitle',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=9.2,
-        leading=11.5,
+        fontSize=9.0,
+        leading=11,
         textColor=PRIMARY_COLOR
     )
 
@@ -90,8 +90,8 @@ def create_resume(output_filename):
         'JobCompany',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=8.8,
-        leading=11,
+        fontSize=8.5,
+        leading=10.5,
         textColor=SECONDARY_COLOR
     )
 
@@ -99,8 +99,8 @@ def create_resume(output_filename):
         'JobPeriod',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.2,
-        leading=11,
+        fontSize=8.0,
+        leading=10.5,
         textColor=TEXT_MUTED,
         alignment=2 # Right
     )
@@ -109,8 +109,8 @@ def create_resume(output_filename):
         'BulletText',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.3,
-        leading=10.8,
+        fontSize=8.1,
+        leading=10.5,
         textColor=TEXT_DARK,
         leftIndent=10,
         firstLineIndent=-6,
@@ -121,8 +121,8 @@ def create_resume(output_filename):
         'SkillLabel',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=8.5,
-        leading=11.5,
+        fontSize=8.2,
+        leading=11,
         textColor=PRIMARY_COLOR
     )
 
@@ -130,8 +130,8 @@ def create_resume(output_filename):
         'SkillVal',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.5,
-        leading=11.5,
+        fontSize=8.2,
+        leading=11,
         textColor=TEXT_DARK
     )
 
@@ -140,7 +140,7 @@ def create_resume(output_filename):
     # 1. HEADER
     story.append(Paragraph("Filipe Vicente Hidalgo", title_style))
     story.append(Spacer(1, 2))
-    story.append(Paragraph("Desenvolvedor Front-End &nbsp;|&nbsp; Suporte Técnico (N1/N2) &nbsp;|&nbsp; Customer Success", subtitle_style))
+    story.append(Paragraph("Desenvolvedor Front-End &nbsp;|&nbsp; Suporte Técnico N2 &nbsp;|&nbsp; Customer Success Specialist", subtitle_style))
     story.append(Spacer(1, 1))
 
     contact_text = (
@@ -151,17 +151,18 @@ def create_resume(output_filename):
         "<a href='https://filipevicenteh.vercel.app' color='#0D9488'>Portfólio Online</a>"
     )
     story.append(Paragraph(contact_text, contact_style))
-    story.append(Spacer(1, 3))
-    story.append(HRFlowable(width="100%", thickness=1, color=PRIMARY_COLOR, spaceBefore=1, spaceAfter=4))
+    story.append(Spacer(1, 2))
+    story.append(HRFlowable(width="100%", thickness=1, color=PRIMARY_COLOR, spaceBefore=1, spaceAfter=3))
 
     # 2. RESUMO PROFISSIONAL
     story.append(Paragraph("RESUMO PROFISSIONAL", section_heading_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=LINE_COLOR, spaceBefore=1, spaceAfter=3))
     summary_p = (
-        "Profissional com formação em <b>Ciência da Computação</b> e <b>Design Gráfico</b>, atuando em Suporte Técnico (N1/N2), "
-        "integrações de sistemas (APIs e Webhooks), desenvolvimento Front-End (React, Next.js, TypeScript) e Customer Success. "
-        "Experiência no desenvolvimento do UnicoCRM (Next.js 15, Neon PostgreSQL), automação de fluxos operacionais (WhatsApp/E-mail), "
-        "redesign de UI/UX e dashboards em Power BI. Perfil analítico e orientado a resultados técnicos e de negócios."
+        "Profissional híbrido com sólida formação acadêmica em <b>Ciência da Computação</b> e <b>Design Gráfico</b>, com experiência "
+        "comprovada no desenvolvimento Front-End de aplicações web (React, Next.js 15, TypeScript), engenharia de integrações via APIs/Webhooks, "
+        "atendimento técnico de <b>Suporte N1/N2</b> e <b>Customer Success (CS)</b>. Criador da plataforma SaaS <b>UnicoCRM</b> "
+        "(gestão de retenção e reconversão de churn) e responsável pelo redesign visual de 30 interfaces da plataforma UnicoDrop. "
+        "Habilidade em transformar chamados técnicos e demandas de suporte em soluções definitivas de software e melhorias de UX."
     )
     story.append(Paragraph(summary_p, body_style))
     story.append(Spacer(1, 3))
@@ -172,52 +173,48 @@ def create_resume(output_filename):
 
     skills_data = [
         [
-            Paragraph("<b>Front-End:</b>", skill_label_style),
-            Paragraph("HTML5, CSS3, JavaScript (ES6+), React, Next.js 15, TypeScript, Tailwind, Bootstrap", skill_val_style)
+            Paragraph("<b>Front-End & UI/UX:</b>", skill_label_style),
+            Paragraph("HTML5, CSS3, JavaScript (ES6+), React, Next.js 15, TypeScript, Tailwind, Figma, Responsive Design", skill_val_style)
         ],
         [
             Paragraph("<b>Back-End & APIs:</b>", skill_label_style),
-            Paragraph("Node.js, APIs RESTful, Webhooks, JSON, Prisma ORM", skill_val_style)
+            Paragraph("Node.js, APIs RESTful, Webhooks, JSON, Prisma ORM, Neon PostgreSQL Cloud, SQL", skill_val_style)
         ],
         [
-            Paragraph("<b>Bancos de Dados & BI:</b>", skill_label_style),
-            Paragraph("SQL, PostgreSQL (Neon Cloud), Oracle, Power BI, Excel Intermediário/Avançado", skill_val_style)
+            Paragraph("<b>Suporte Técnico N2:</b>", skill_label_style),
+            Paragraph("Troubleshooting avançado, análise de logs, payloads de APIs/Webhooks, Helpdesk, redução de SLA, suporte remoto", skill_val_style)
         ],
         [
-            Paragraph("<b>Suporte & Operações:</b>", skill_label_style),
-            Paragraph("Helpdesk N1/N2, Troubleshooting Técnico, Sistemas de Chamados, Suporte Remoto", skill_val_style)
+            Paragraph("<b>Customer Success & Onboarding:</b>", skill_label_style),
+            Paragraph("Onboarding técnico de clientes, gestão de churn, retenção de contas, relatórios operacionais (Power BI/Excel)", skill_val_style)
         ],
         [
-            Paragraph("<b>Integrações & E-commerce:</b>", skill_label_style),
-            Paragraph("Shopify, Nuvemshop, Automações de Mensagens (WhatsApp, E-mail)", skill_val_style)
+            Paragraph("<b>Plataformas & Automação:</b>", skill_label_style),
+            Paragraph("Shopify, Nuvemshop, instâncias de automação WhatsApp (QR Code / API), disparos SMS e E-mail", skill_val_style)
         ],
         [
-            Paragraph("<b>Sistemas, Redes & Hardware:</b>", skill_label_style),
-            Paragraph("Windows, Linux, macOS, TCP/IP, DNS, DHCP, Montagem & Manutenção de PCs", skill_val_style)
-        ],
-        [
-            Paragraph("<b>Ferramentas & Design:</b>", skill_label_style),
-            Paragraph("Git, GitHub, Figma, Photoshop, Illustrator", skill_val_style)
+            Paragraph("<b>Sistemas & Infraestrutura:</b>", skill_label_style),
+            Paragraph("Windows, Linux, macOS, TCP/IP, DNS, Git, GitHub, Montagem & Manutenção de Hardware", skill_val_style)
         ]
     ]
 
-    t_skills = Table(skills_data, colWidths=[140, 400])
+    t_skills = Table(skills_data, colWidths=[150, 390])
     t_skills.setStyle(TableStyle([
         ('VALIGN', (0, 0), (-1, -1), 'TOP'),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 1.5),
-        ('TOPPADDING', (0, 0), (-1, -1), 1.5),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 1.2),
+        ('TOPPADDING', (0, 0), (-1, -1), 1.2),
         ('LEFTPADDING', (0, 0), (-1, -1), 0),
         ('RIGHTPADDING', (0, 0), (-1, -1), 0),
     ]))
     story.append(t_skills)
     story.append(Spacer(1, 3))
 
-    # 4. HISTÓRICO PROFISSIONAL
-    story.append(Paragraph("HISTÓRICO PROFISSIONAL", section_heading_style))
+    # 4. HISTÓRICO PROFISSIONAL & PROJETOS
+    story.append(Paragraph("HISTÓRICO PROFISSIONAL E PROJETOS EM DESTAQUE", section_heading_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=LINE_COLOR, spaceBefore=1, spaceAfter=3))
 
     # Job 1: Unico Drop
-    j1_title = Paragraph("Analista de TI & Suporte Técnico", job_title_style)
+    j1_title = Paragraph("Analista de TI, Desenvolvedor & Suporte N2 / CS Specialist", job_title_style)
     j1_company = Paragraph("Unico Drop", job_company_style)
     j1_period = Paragraph("06/2024 &ndash; 08/2026", job_period_style)
 
@@ -236,19 +233,18 @@ def create_resume(output_filename):
     story.append(Spacer(1, 1.5))
 
     j1_bullets = [
-        "Idealizei e desenvolvi o UnicoCRM (Next.js 15, TypeScript, Prisma, Neon PostgreSQL) para automação e reconversão de clientes cancelados.",
-        "Liderei a reformulação visual de UI/UX (React, Tailwind CSS, Figma) da plataforma UnicoDrop, otimizando a usabilidade do usuário.",
-        "Desenvolvi Landing Page interativa de diagnóstico com formulário dinâmico e integração via Webhook para captação de novos clientes.",
-        "Investigo e corrijo falhas em integrações via API e Webhooks entre a plataforma e lojas virtuais (Shopify, Nuvemshop).",
-        "Configuro automações de disparo de mensagens (WhatsApp/E-mail) e realizo atendimento técnico N1/N2 com redução de SLA.",
-        "Conduzo o onboarding de novos clientes e atuo em Customer Success com suporte à criação de relatórios operacionais."
+        "<b>Projeto UnicoCRM (Full-Stack SaaS):</b> Idealizei e construí do zero uma aplicação web completa (Next.js 15, TypeScript, Tailwind, Prisma, Neon PostgreSQL) para acompanhamento de retenção e reconversão de clientes cancelados. <i>Resultado: centralização do histórico de atendimento, análise dos motivos de churn e recuperação direta de receita (MRR).</i>",
+        "<b>Projeto UnicoDrop Redesign Visual (30 Interfaces):</b> Reformulei visualmente 30 telas operacionais (React, Tailwind, Figma) incluindo dashboards de vendas (Facebook/Google Ads), rastreio e DRE financeiro. <i>Resultado: otimização da experiência dos lojistas e diminuição estimada em 40% no tempo de localização de informações.</i>",
+        "<b>Projeto Landing Page Diagnóstico Webhook:</b> Desenvolvi landing page de conversão com formulário dinâmico integrado via Webhook para pré-qualificação de clientes. <i>Resultado: automação da captura de leads e agilidade na entrada de novos e-commerces na plataforma.</i>",
+        "<b>Atendimento de Suporte N2 & Troubleshooting:</b> Atuação direta em incidentes de maior complexidade, analisando requisições JSON, instâncias de automação de WhatsApp/SMS e integridade de APIs com plataformas como Shopify e Nuvemshop, garantindo baixa taxa de reincidência e SLA reduzido.",
+        "<b>Customer Success & Onboarding Técnico:</b> Condução do processo de onboarding de novos lojistas, suporte na configuração de domínios e taxas, treinamentos da ferramenta e elaboração de relatórios estratégicos para apoiar o crescimento e a retenção da carteira de clientes."
     ]
     for bullet in j1_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))
     story.append(Spacer(1, 3))
 
     # Job 2: Levlife
-    j2_title = Paragraph("Design & Social Media | E-commerce", job_title_style)
+    j2_title = Paragraph("Design & Social Media Specialist | E-commerce", job_title_style)
     j2_company = Paragraph("Levlife", job_company_style)
     j2_period = Paragraph("03/2022 &ndash; 08/2023", job_period_style)
 
@@ -267,17 +263,16 @@ def create_resume(output_filename):
     story.append(Spacer(1, 1.5))
 
     j2_bullets = [
-        "Desenvolvi peças gráficas, conteúdos digitais e materiais visuais para fortalecer a presença da marca nas redes sociais.",
-        "Criei landing pages com foco em engajamento, divulgação de produtos e conversão de clientes.",
-        "Gerenciei e-commerce e plataformas digitais, apoiando a organização de produtos, conteúdos e campanhas.",
-        "Planejei campanhas digitais e organizei conteúdos estratégicos para melhorar a comunicação da marca."
+        "Desenvolvimento de landing pages focadas em alta conversão e divulgação de produtos digitais e físicos.",
+        "Criação de identidade visual, peças publicitárias e banners promocionais utilizando Photoshop, Illustrator e Figma.",
+        "Gestão de catálogos e suporte operacional para e-commerce, garantindo consistência na apresentação dos produtos."
     ]
     for bullet in j2_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))
     story.append(Spacer(1, 3))
 
     # Job 3: 2º Tabelião
-    j3_title = Paragraph("Auxiliar de Cartório", job_title_style)
+    j3_title = Paragraph("Auxiliar de Cartório & Atendimento Técnico", job_title_style)
     j3_company = Paragraph("2º Tabelião de Protestos e Notas de São Caetano do Sul", job_company_style)
     j3_period = Paragraph("05/2021 &ndash; 02/2022", job_period_style)
 
@@ -296,9 +291,8 @@ def create_resume(output_filename):
     story.append(Spacer(1, 1.5))
 
     j3_bullets = [
-        "Realizei análise, conferência e organização de documentos em alto volume, garantindo agilidade e precisão interna.",
-        "Prestei atendimento ao cliente e suporte administrativo, auxiliando na resolução de dúvidas e demandas operacionais.",
-        "Otimizei fluxos internos com uso de sistemas e organização de processos, aumentando a eficiência operacional da equipe."
+        "Atendimento direto ao público e suporte a usuários na conferência e processamento de documentos corporativos em alto volume.",
+        "Organização de fluxos e dados cadastrais em sistemas internos, garantindo precisão e conformidade com requisitos operacionais."
     ]
     for bullet in j3_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))
@@ -310,7 +304,7 @@ def create_resume(output_filename):
 
     edu_data = [
         [
-            Paragraph("<b>Bacharelado em Ciência da Computação</b> &ndash; <font color='#64748B'>Centro Universitário União das Américas Descomplica (UniAmérica)</font>", skill_val_style),
+            Paragraph("<b>Bacharelado em Ciência da Computação</b> &ndash; <font color='#64748B'>Centro Univ. Descomplica (UniAmérica)</font>", skill_val_style),
             Paragraph("<font color='#64748B'>Concluído: 07/2026</font>", job_period_style)
         ],
         [

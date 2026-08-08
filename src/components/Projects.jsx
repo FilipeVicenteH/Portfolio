@@ -6,8 +6,9 @@ const projects = [
     number: '01',
     title: 'UnicoCRM',
     subtitle: 'Gestão de Retenção & Reconversão de Churn',
-    description: 'Construí do zero uma aplicação SaaS Full Stack para centralizar o processo de cancelamentos da UnicoDrop. O sistema reúne histórico de interações, categoriza motivos de churn e acompanha o pipeline de reativação — tudo em tempo real.',
-    tech: ['Next.js 15', 'TypeScript', 'Neon PostgreSQL', 'Prisma ORM', 'Tailwind CSS', 'Recharts'],
+    architecture: 'Desenvolvi do zero uma aplicação SaaS Full Stack em Next.js 15 (App Router e Server Actions), TypeScript e Tailwind CSS, integrada a um banco de dados Serverless Neon PostgreSQL via Prisma ORM. O projeto nasceu da necessidade de centralizar o atendimento a solicitações de cancelamento na UnicoDrop, organizando o histórico de interações, categorização por motivo de saída (preço, suporte, bugs, concorrência) e filtros por status de negociação e prioridade.',
+    impact: 'O sistema automatizou a régua de retenção de clientes, permitindo que a equipe de Customer Success atuasse proativamente na reconversão de lojistas antes da perda definitiva, gerando impacto direto na redução da taxa de churn e preservação de receita recorrente (MRR).',
+    tech: ['Next.js 15', 'TypeScript', 'Neon PostgreSQL', 'Prisma ORM', 'Tailwind CSS', 'Recharts', 'SaaS Full Stack'],
     images: [
       { url: '/projects/unicocrm_real.jpg', label: 'Visão Geral & Funil de Churn' },
       { url: '/projects/unicocrm_clientes_real.jpg', label: 'Lista de Clientes Cancelados' },
@@ -20,8 +21,9 @@ const projects = [
     number: '02',
     title: 'UnicoDrop Redesign',
     subtitle: '30 Interfaces Codadas — Case Study UI/UX',
-    description: 'Reformulei a interface legada da plataforma UnicoDrop — desde a prototipagem no Figma até a recodificação de 30 telas em React. O novo Design System organizou dashboards, tabelas de pedidos, módulos de logística e automações em uma experiência coesa.',
-    tech: ['React', 'JavaScript', 'Tailwind CSS', 'Figma', 'ApexCharts', 'DataTables'],
+    architecture: 'Liderei a reformulação estética e funcional da plataforma UnicoDrop, desde a prototipagem de alta fidelidade e estruturação do Design System no Figma até a recodificação completa de 30 interfaces operacionais em React, Tailwind CSS e ApexCharts. O layout legado sofria com poluição visual e baixa hierarquia de dados; a nova arquitetura organizou métricas financeiras (DRE, faturamento), rastreio logístico e automações de mensageria em 4 módulos coesos.',
+    impact: 'A nova interface simplificou a curva de aprendizado dos usuários, proporcionando redução estimada em 40% no tempo necessário para consultar informações operacionais críticas e elevando o nível de satisfação estética e retenção na plataforma.',
+    tech: ['React', 'JavaScript', 'Tailwind CSS', 'Figma', 'ApexCharts', 'DataTables', 'Frontend SaaS'],
     images: [
       { url: '/projects/telas_ranking_real.jpg', label: 'Dashboard Executivo & Ranking' },
       { url: '/projects/telas_rastreio_real.jpg', label: 'Módulo de Rastreio & Logística' },
@@ -34,8 +36,9 @@ const projects = [
     number: '03',
     title: 'Diagnóstico UnicoDrop',
     subtitle: 'Landing Page de Captação via Webhook',
-    description: 'Desenvolvi uma landing page de alta conversão com fluxo interativo em 7 perguntas para qualificar lojistas antes do contato comercial. Os dados são enviados em tempo real para o CRM via Webhooks HTTP, eliminando a triagem manual pela equipe.',
-    tech: ['JavaScript ES6+', 'HTML5', 'CSS3', 'Webhooks HTTP', 'Vercel'],
+    architecture: 'Projetei e codifiquei uma landing page interativa focada na captação e qualificação automatizada de leads para a UnicoDrop. Desenvolvida com HTML5 semântico, CSS3 e JavaScript ES6+ assíncrono, a página guia o visitante por um fluxo de auditoria operacional em 7 perguntas dinâmicas (avaliação de vendas, frete e checkout) e dispara os dados de qualificação em tempo real via Webhooks HTTP diretamente para os sistemas de vendas/CRM.',
+    impact: 'Eliminou a necessidade de triagem manual inicial pela equipe comercial, entregando um diagnóstico instantâneo de alto valor ao lojista e aumentando expressivamente a taxa de conversão de novos e-commerces qualificados.',
+    tech: ['JavaScript ES6+', 'HTML5', 'CSS3', 'Webhooks HTTP', 'Vercel', 'CRO & Landing Pages'],
     images: [
       { url: '/projects/landingshopify_real.jpg', label: 'Auditoria em 7 Perguntas' },
     ],
@@ -81,7 +84,7 @@ export default function Projects() {
           <span className="num">03.</span> Projetos em Destaque
         </h2>
 
-        <div className="space-y-6">
+        <div className="space-y-12">
           {projects.map((proj, i) => {
             const currentImgIndex = activeImageIndexes[i] || 0;
             const currentImage = proj.images[currentImgIndex];
@@ -104,39 +107,20 @@ export default function Projects() {
                     : '0 4px 24px rgba(0,0,0,0.2)',
                 }}
               >
-                <div className="grid lg:grid-cols-2 gap-0 min-h-[340px]">
+                <div className="grid lg:grid-cols-12 gap-0 min-h-[380px]">
 
-                  {/* — Left: Image Panel — */}
-                  <div className="relative overflow-hidden bg-[#0a1628] min-h-[260px] lg:min-h-full">
+                  {/* — Left: Image Showcase — */}
+                  <div className="lg:col-span-5 relative overflow-hidden bg-[#0a1628] min-h-[280px] lg:min-h-full flex flex-col justify-between">
                     <img
                       key={currentImage.url}
                       src={currentImage.url}
                       alt={currentImage.label}
                       className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-                      style={{ opacity: 0.9 }}
+                      style={{ opacity: 0.92 }}
                     />
 
-                    {/* Gradient overlay bottom-left for caption */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/80 via-transparent to-transparent pointer-events-none" />
-
-                    {/* Image switcher dots — only if multiple images */}
-                    {proj.images.length > 1 && (
-                      <div className="absolute bottom-4 left-4 flex items-center gap-2">
-                        {proj.images.map((img, idx) => (
-                          <button
-                            key={idx}
-                            onClick={() => handleImageSwitch(i, idx)}
-                            title={img.label}
-                            className="transition-all duration-200 rounded-full focus:outline-none"
-                            style={{
-                              width: currentImgIndex === idx ? '24px' : '8px',
-                              height: '8px',
-                              background: currentImgIndex === idx ? 'rgba(13,148,136,1)' : 'rgba(255,255,255,0.3)',
-                            }}
-                          />
-                        ))}
-                      </div>
-                    )}
+                    {/* Gradient overlay bottom for caption & dots */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent pointer-events-none opacity-80" />
 
                     {/* Type badge top-left */}
                     <div className="absolute top-4 left-4">
@@ -152,32 +136,57 @@ export default function Projects() {
                         {proj.type}
                       </span>
                     </div>
+
+                    {/* Image switcher dots & Caption — bottom */}
+                    <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-2">
+                      <span className="text-[11px] font-mono text-slate-light/80 truncate">
+                        {currentImage.label}
+                      </span>
+
+                      {proj.images.length > 1 && (
+                        <div className="flex items-center gap-1.5 shrink-0 bg-[#0a1628]/80 p-1 rounded-full border border-white/10 backdrop-blur-sm">
+                          {proj.images.map((img, idx) => (
+                            <button
+                              key={idx}
+                              onClick={() => handleImageSwitch(i, idx)}
+                              title={img.label}
+                              className="transition-all duration-200 rounded-full focus:outline-none"
+                              style={{
+                                width: currentImgIndex === idx ? '20px' : '6px',
+                                height: '6px',
+                                background: currentImgIndex === idx ? '#0D9488' : 'rgba(255,255,255,0.3)',
+                              }}
+                            />
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   </div>
 
-                  {/* — Right: Content Panel — */}
-                  <div className="flex flex-col justify-between p-7 md:p-9">
+                  {/* — Right: Detailed Content Panel — */}
+                  <div className="lg:col-span-7 flex flex-col justify-between p-6 md:p-8">
 
                     {/* Header */}
                     <div>
                       {/* Number + title row */}
-                      <div className="flex items-start gap-4 mb-4">
+                      <div className="flex items-start gap-3.5 mb-3">
                         <span
-                          className="font-mono text-4xl font-bold leading-none select-none mt-0.5"
+                          className="font-mono text-3xl md:text-4xl font-bold leading-none select-none mt-0.5"
                           style={{
                             color: 'transparent',
-                            WebkitTextStroke: '1px rgba(13,148,136,0.3)',
+                            WebkitTextStroke: '1px rgba(13,148,136,0.35)',
                           }}
                         >
                           {proj.number}
                         </span>
                         <div>
                           <h3
-                            className="text-lg font-bold leading-tight mb-0.5 transition-colors duration-300"
-                            style={{ color: hoveredProject === i ? '#E2E8F0' : '#CBD5E1' }}
+                            className="text-lg md:text-xl font-bold leading-snug transition-colors duration-300"
+                            style={{ color: hoveredProject === i ? '#F1F5F9' : '#CBD5E1' }}
                           >
                             {proj.title}
                           </h3>
-                          <p className="text-sm" style={{ color: '#0D9488' }}>
+                          <p className="text-xs md:text-sm font-mono" style={{ color: '#0D9488' }}>
                             {proj.subtitle}
                           </p>
                         </div>
@@ -185,7 +194,7 @@ export default function Projects() {
 
                       {/* Divider */}
                       <div
-                        className="mb-5 transition-all duration-500"
+                        className="mb-4 transition-all duration-500"
                         style={{
                           height: '1px',
                           background: hoveredProject === i
@@ -194,22 +203,38 @@ export default function Projects() {
                         }}
                       />
 
-                      {/* Description — plain prose, no boxes */}
+                      {/* Architecture & Challenge Detailed Text */}
                       <p
-                        className="text-sm leading-relaxed mb-6"
-                        style={{ color: '#8892B0' }}
+                        className="text-xs md:text-sm leading-relaxed mb-4"
+                        style={{ color: '#94A3B8' }}
                       >
-                        {proj.description}
+                        {proj.architecture}
                       </p>
 
-                      {/* Tech tags — minimal pill style */}
-                      <div className="flex flex-wrap gap-2 mb-6">
+                      {/* Business Impact Highlight Block */}
+                      <div
+                        className="mb-5 p-3.5 rounded-r-lg border-l-2 transition-all duration-300"
+                        style={{
+                          background: 'rgba(13,148,136,0.06)',
+                          borderColor: '#0D9488',
+                        }}
+                      >
+                        <span className="text-[11px] font-mono uppercase tracking-wider block mb-1 font-semibold" style={{ color: '#0D9488' }}>
+                          Impacto & Resultado Prático
+                        </span>
+                        <p className="text-xs leading-relaxed" style={{ color: '#E2E8F0' }}>
+                          {proj.impact}
+                        </p>
+                      </div>
+
+                      {/* Tech tags */}
+                      <div className="flex flex-wrap gap-1.5 mb-5">
                         {proj.tech.map((tag, j) => (
                           <span
                             key={j}
                             className="text-[11px] font-mono px-2.5 py-0.5 rounded-full"
                             style={{
-                              color: '#64748B',
+                              color: '#94A3B8',
                               background: 'rgba(255,255,255,0.04)',
                               border: '1px solid rgba(255,255,255,0.08)',
                             }}
@@ -220,26 +245,26 @@ export default function Projects() {
                       </div>
                     </div>
 
-                    {/* Footer: Links */}
-                    <div className="flex items-center gap-3">
+                    {/* Action Links */}
+                    <div className="flex items-center gap-3 pt-2">
                       {proj.demo && (
                         <a
                           href={proj.demo}
                           target="_blank"
                           rel="noreferrer"
-                          className="flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-lg transition-all duration-200"
+                          className="flex items-center gap-2 text-xs md:text-sm font-medium px-4 py-2 rounded-lg transition-all duration-200"
                           style={{
                             color: '#0D9488',
-                            background: 'rgba(13,148,136,0.1)',
-                            border: '1px solid rgba(13,148,136,0.25)',
+                            background: 'rgba(13,148,136,0.12)',
+                            border: '1px solid rgba(13,148,136,0.3)',
                           }}
                           onMouseEnter={e => {
-                            e.currentTarget.style.background = 'rgba(13,148,136,0.2)';
-                            e.currentTarget.style.borderColor = 'rgba(13,148,136,0.5)';
+                            e.currentTarget.style.background = 'rgba(13,148,136,0.22)';
+                            e.currentTarget.style.borderColor = 'rgba(13,148,136,0.6)';
                           }}
                           onMouseLeave={e => {
-                            e.currentTarget.style.background = 'rgba(13,148,136,0.1)';
-                            e.currentTarget.style.borderColor = 'rgba(13,148,136,0.25)';
+                            e.currentTarget.style.background = 'rgba(13,148,136,0.12)';
+                            e.currentTarget.style.borderColor = 'rgba(13,148,136,0.3)';
                           }}
                         >
                           <IconExternal />
@@ -251,20 +276,20 @@ export default function Projects() {
                           href={proj.github}
                           target="_blank"
                           rel="noreferrer"
-                          className="flex items-center gap-2 text-sm px-4 py-2 rounded-lg transition-all duration-200"
+                          className="flex items-center gap-2 text-xs md:text-sm px-4 py-2 rounded-lg transition-all duration-200"
                           style={{
-                            color: '#64748B',
+                            color: '#94A3B8',
                             background: 'rgba(255,255,255,0.03)',
-                            border: '1px solid rgba(255,255,255,0.07)',
+                            border: '1px solid rgba(255,255,255,0.08)',
                           }}
                           onMouseEnter={e => {
-                            e.currentTarget.style.color = '#CBD5E1';
-                            e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)';
-                            e.currentTarget.style.background = 'rgba(255,255,255,0.06)';
+                            e.currentTarget.style.color = '#E2E8F0';
+                            e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';
+                            e.currentTarget.style.background = 'rgba(255,255,255,0.07)';
                           }}
                           onMouseLeave={e => {
-                            e.currentTarget.style.color = '#64748B';
-                            e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)';
+                            e.currentTarget.style.color = '#94A3B8';
+                            e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
                             e.currentTarget.style.background = 'rgba(255,255,255,0.03)';
                           }}
                         >

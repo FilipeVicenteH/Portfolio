@@ -1,4 +1,5 @@
 import os
+import fitz # PyMuPDF
 from reportlab.lib.pagesizes import letter
 from reportlab.lib import colors
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable
@@ -9,10 +10,10 @@ def create_resume(output_filename):
     doc = SimpleDocTemplate(
         output_filename,
         pagesize=letter,
-        leftMargin=32,
-        rightMargin=32,
-        topMargin=18,
-        bottomMargin=18
+        leftMargin=30,
+        rightMargin=30,
+        topMargin=14,
+        bottomMargin=14
     )
 
     styles = getSampleStyleSheet()
@@ -24,13 +25,13 @@ def create_resume(output_filename):
     TEXT_MUTED = colors.HexColor('#64748B')      # Slate muted
     LINE_COLOR = colors.HexColor('#CBD5E1')      # Border line
 
-    # Styles
+    # Typography & Styles optimized for 1-page fit and high readability
     title_style = ParagraphStyle(
         'NameTitle',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=18,
-        leading=20,
+        fontSize=17.5,
+        leading=19.5,
         textColor=PRIMARY_COLOR,
         alignment=TA_CENTER
     )
@@ -39,8 +40,8 @@ def create_resume(output_filename):
         'HeaderTitle',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=8.8,
-        leading=10.5,
+        fontSize=8.5,
+        leading=10.2,
         textColor=SECONDARY_COLOR,
         alignment=TA_CENTER,
         spaceAfter=1
@@ -50,8 +51,8 @@ def create_resume(output_filename):
         'ContactInfo',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=7.6,
-        leading=9.8,
+        fontSize=7.4,
+        leading=9.5,
         textColor=TEXT_MUTED,
         alignment=TA_CENTER
     )
@@ -60,10 +61,10 @@ def create_resume(output_filename):
         'SectionHeading',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=9.2,
-        leading=11.0,
+        fontSize=8.8,
+        leading=10.6,
         textColor=PRIMARY_COLOR,
-        spaceBefore=3,
+        spaceBefore=2.5,
         spaceAfter=1
     )
 
@@ -71,8 +72,8 @@ def create_resume(output_filename):
         'BodyDark',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=7.9,
-        leading=10.5,
+        fontSize=7.5,
+        leading=9.9,
         textColor=TEXT_DARK,
         alignment=TA_JUSTIFY
     )
@@ -81,8 +82,8 @@ def create_resume(output_filename):
         'JobTitle',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=8.5,
-        leading=10.5,
+        fontSize=8.2,
+        leading=10.2,
         textColor=PRIMARY_COLOR
     )
 
@@ -90,8 +91,8 @@ def create_resume(output_filename):
         'JobCompany',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=8.2,
-        leading=10.0,
+        fontSize=8.0,
+        leading=9.8,
         textColor=SECONDARY_COLOR
     )
 
@@ -99,8 +100,8 @@ def create_resume(output_filename):
         'JobPeriod',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=7.6,
-        leading=10.0,
+        fontSize=7.4,
+        leading=9.8,
         textColor=TEXT_MUTED,
         alignment=2 # Right
     )
@@ -109,20 +110,20 @@ def create_resume(output_filename):
         'BulletText',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=7.7,
-        leading=9.9,
+        fontSize=7.5,
+        leading=9.7,
         textColor=TEXT_DARK,
         leftIndent=9,
         firstLineIndent=-5,
-        spaceAfter=1.5
+        spaceAfter=1.2
     )
 
     skill_label_style = ParagraphStyle(
         'SkillLabel',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=7.8,
-        leading=10.2,
+        fontSize=7.5,
+        leading=9.8,
         textColor=PRIMARY_COLOR
     )
 
@@ -130,8 +131,8 @@ def create_resume(output_filename):
         'SkillVal',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=7.8,
-        leading=10.2,
+        fontSize=7.5,
+        leading=9.8,
         textColor=TEXT_DARK
     )
 
@@ -151,21 +152,21 @@ def create_resume(output_filename):
         "Portfólio: <a href='https://filipevicenteh.vercel.app' color='#0D9488'>filipevicenteh.vercel.app</a>"
     )
     story.append(Paragraph(contact_text, contact_style))
-    story.append(Spacer(1, 1))
+    story.append(Spacer(1, 1.5))
     story.append(HRFlowable(width="100%", thickness=1, color=PRIMARY_COLOR, spaceBefore=1, spaceAfter=2))
 
-    # 2. RESUMO PROFISSIONAL (100% HUMANIZADO)
+    # 2. RESUMO PROFISSIONAL
     story.append(Paragraph("RESUMO PROFISSIONAL", section_heading_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=LINE_COLOR, spaceBefore=1, spaceAfter=2))
     summary_p = (
-        "<b>Desenvolvedor Front-End e Analista de Suporte Técnico N2</b> com formação em <b>Ciência da Computação</b> e <b>Design Gráfico</b>. "
-        "Atuação focada no desenvolvimento de interfaces SaaS (React, Next.js 15, TypeScript), integrações via APIs/Webhooks e resolução de chamados "
-        "N2 de alta complexidade com análise de logs (Postman/cURL). Criador da aplicação <b>UnicoCRM</b> para gestão de retenção e reconversão de clientes "
-        "cancelados, e responsável pelo <b>Redesign Visual de 30 interfaces</b> da plataforma UnicoDrop. Experiência prática em Customer Success, "
-        "onboarding de lojistas e sustentação de sistemas."
+        "<b>Desenvolvedor Front-End e Analista de Suporte Técnico N2</b> com formação dupla em <b>Ciência da Computação</b> e <b>Design Gráfico</b>. "
+        "Atuação focada no desenvolvimento de interfaces digitais responsivas e de alta performance (React, Next.js 15, TypeScript), "
+        "integrações robustas via APIs RESTful/Webhooks e resolução de chamados N2 de alta complexidade com análise detalhada de logs (Postman/cURL). "
+        "Criador da aplicação <b>UnicoCRM</b> para gestão de retenção e reconversão de lojistas cancelados, e responsável pelo <b>Redesign UI/UX de 30 interfaces</b> "
+        "da plataforma UnicoDrop. Domínio técnico em Customer Success, onboarding de clientes e sustentação de sistemas SaaS."
     )
     story.append(Paragraph(summary_p, body_style))
-    story.append(Spacer(1, 2))
+    story.append(Spacer(1, 1.5))
 
     # 3. HABILIDADES TÉCNICAS
     story.append(Paragraph("HABILIDADES TÉCNICAS", section_heading_style))
@@ -198,16 +199,16 @@ def create_resume(output_filename):
         ]
     ]
 
-    t_skills = Table(skills_data, colWidths=[140, 408])
+    t_skills = Table(skills_data, colWidths=[138, 414])
     t_skills.setStyle(TableStyle([
         ('VALIGN', (0, 0), (-1, -1), 'TOP'),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 0.6),
-        ('TOPPADDING', (0, 0), (-1, -1), 0.6),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 0.5),
+        ('TOPPADDING', (0, 0), (-1, -1), 0.5),
         ('LEFTPADDING', (0, 0), (-1, -1), 0),
         ('RIGHTPADDING', (0, 0), (-1, -1), 0),
     ]))
     story.append(t_skills)
-    story.append(Spacer(1, 2))
+    story.append(Spacer(1, 1.5))
 
     # 4. PROJETOS DE SOFTWARE & SISTEMAS SAAS
     story.append(Paragraph("PROJETOS DE SOFTWARE & SISTEMAS SAAS", section_heading_style))
@@ -230,7 +231,7 @@ def create_resume(output_filename):
     ]
     for proj_item in projects_list:
         story.append(Paragraph(f"&bull; {proj_item}", bullet_style))
-    story.append(Spacer(1, 2))
+    story.append(Spacer(1, 1.5))
 
     # 5. HISTÓRICO PROFISSIONAL
     story.append(Paragraph("HISTÓRICO PROFISSIONAL", section_heading_style))
@@ -244,7 +245,7 @@ def create_resume(output_filename):
     header_table1 = Table([
         [j1_title, j1_period],
         [j1_company, Paragraph("", job_period_style)]
-    ], colWidths=[390, 158])
+    ], colWidths=[394, 158])
     header_table1.setStyle(TableStyle([
         ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
         ('BOTTOMPADDING', (0,0), (-1,-1), 0),
@@ -253,7 +254,7 @@ def create_resume(output_filename):
         ('RIGHTPADDING', (0,0), (-1,-1), 0),
     ]))
     story.append(header_table1)
-    story.append(Spacer(1, 1))
+    story.append(Spacer(1, 0.8))
 
     j1_bullets = [
         "<b>Suporte Técnico N2 & Troubleshooting de Integrações:</b> Diagnostiquei e resolvi chamados técnicos de alta complexidade (N2), realizando a depuração detalhada de payloads JSON, logs de requisições HTTP via <b>Postman, Insomnia e cURL</b> e verificação de Status Codes (4xx/5xx). Atuação direta na análise de instâncias de mensageria (WhatsApp QR Code / SMS) e sincronização de pedidos e estoques com e-commerces (<b>Shopify e Nuvemshop</b>), garantindo baixa taxa de reincidência e SLA reduzido.",
@@ -261,7 +262,7 @@ def create_resume(output_filename):
     ]
     for bullet in j1_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))
-    story.append(Spacer(1, 2))
+    story.append(Spacer(1, 1.5))
 
     # Job 2: Levlife
     j2_title = Paragraph("Design & Social Media Specialist | E-commerce", job_title_style)
@@ -271,7 +272,7 @@ def create_resume(output_filename):
     header_table2 = Table([
         [j2_title, j2_period],
         [j2_company, Paragraph("", job_period_style)]
-    ], colWidths=[390, 158])
+    ], colWidths=[394, 158])
     header_table2.setStyle(TableStyle([
         ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
         ('BOTTOMPADDING', (0,0), (-1,-1), 0),
@@ -280,15 +281,15 @@ def create_resume(output_filename):
         ('RIGHTPADDING', (0,0), (-1,-1), 0),
     ]))
     story.append(header_table2)
-    story.append(Spacer(1, 1))
+    story.append(Spacer(1, 0.8))
 
     j2_bullets = [
-        "Desenvolvimento de landing pages focadas em alta conversão e promoção visual de produtos e campanhas digitais.",
-        "Criação de identidade visual, peças publicitárias, materiais gráficos e banners utilizando Photoshop, Illustrator e Figma."
+        "<b>Desenvolvimento Front-End & UI de Landing Pages:</b> Projetei e codifiquei landing pages responsivas e páginas de produtos focadas em alta conversão (CRO), aplicando conceitos avançados de UI/UX, arquitetura de informação, prototipagem no <b>Figma</b> e estruturação em <b>HTML5, CSS3 e JavaScript ES6+</b>, otimizando a velocidade de carregamento e o desempenho visual.",
+        "<b>Design de Identidade Visual e Branding E-Commerce:</b> Criação de sistemas de identidade visual completos, peças publicitárias de alto impacto para campanhas de tráfego pago, banners promocionais e materiais gráficos institucionais utilizando <b>Figma, Photoshop e Illustrator</b>, conectando a estética visual à estratégia comercial."
     ]
     for bullet in j2_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))
-    story.append(Spacer(1, 2))
+    story.append(Spacer(1, 1.5))
 
     # Job 3: 2º Tabelião
     j3_title = Paragraph("Auxiliar de Cartório & Atendimento Técnico", job_title_style)
@@ -298,7 +299,7 @@ def create_resume(output_filename):
     header_table3 = Table([
         [j3_title, j3_period],
         [j3_company, Paragraph("", job_period_style)]
-    ], colWidths=[390, 158])
+    ], colWidths=[394, 158])
     header_table3.setStyle(TableStyle([
         ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
         ('BOTTOMPADDING', (0,0), (-1,-1), 0),
@@ -307,14 +308,14 @@ def create_resume(output_filename):
         ('RIGHTPADDING', (0,0), (-1,-1), 0),
     ]))
     story.append(header_table3)
-    story.append(Spacer(1, 1))
+    story.append(Spacer(1, 0.8))
 
     j3_bullets = [
-        "Atendimento direto ao público e conferência minuciosa de documentos corporativos e jurídicos em alto volume."
+        "<b>Suporte Operacional, Atendimento Técnico e Gestão Documental:</b> Atendimento técnico direto ao público e clientes corporativos, atuando na operação de sistemas cartorários internos e na conferência minuciosa de documentos contratuais e societários em alto volume com rigor operacional e validação de dados."
     ]
     for bullet in j3_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))
-    story.append(Spacer(1, 2))
+    story.append(Spacer(1, 1.5))
 
     # 6. FORMAÇÃO ACADÊMICA
     story.append(Paragraph("FORMAÇÃO ACADÊMICA", section_heading_style))
@@ -331,16 +332,16 @@ def create_resume(output_filename):
         ]
     ]
 
-    t_edu = Table(edu_data, colWidths=[390, 158])
+    t_edu = Table(edu_data, colWidths=[394, 158])
     t_edu.setStyle(TableStyle([
         ('VALIGN', (0,0), (-1,-1), 'TOP'),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 0.6),
-        ('TOPPADDING', (0,0), (-1,-1), 0.6),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 0.5),
+        ('TOPPADDING', (0,0), (-1,-1), 0.5),
         ('LEFTPADDING', (0,0), (-1,-1), 0),
         ('RIGHTPADDING', (0,0), (-1,-1), 0),
     ]))
     story.append(t_edu)
-    story.append(Spacer(1, 2))
+    story.append(Spacer(1, 1.5))
 
     # 7. CERTIFICADOS E CURSOS
     story.append(Paragraph("CERTIFICADOS E CURSOS", section_heading_style))
@@ -357,11 +358,11 @@ def create_resume(output_filename):
         ]
     ]
 
-    t_certs = Table(certs_data, colWidths=[270, 278])
+    t_certs = Table(certs_data, colWidths=[274, 278])
     t_certs.setStyle(TableStyle([
         ('VALIGN', (0,0), (-1,-1), 'TOP'),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 0.6),
-        ('TOPPADDING', (0,0), (-1,-1), 0.6),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 0.5),
+        ('TOPPADDING', (0,0), (-1,-1), 0.5),
         ('LEFTPADDING', (0,0), (-1,-1), 0),
         ('RIGHTPADDING', (0,0), (-1,-1), 0),
     ]))
@@ -369,8 +370,14 @@ def create_resume(output_filename):
 
     doc.build(story)
 
+    # Check page count
+    pdf_doc = fitz.open(output_filename)
+    num_pages = len(pdf_doc)
+    print(f"Generated PDF page count: {num_pages}")
+    return num_pages
+
 if __name__ == "__main__":
     out_dir = r"C:\Users\User\Desktop\Portfolio"
     out_file = os.path.join(out_dir, "Curriculo_Filipe_Vicente_Hidalgo.pdf")
-    create_resume(out_file)
-    print(f"PDF generated at: {out_file}")
+    pages = create_resume(out_file)
+    print(f"PDF generated at: {out_file} ({pages} page/s)")

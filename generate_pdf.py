@@ -141,7 +141,7 @@ def create_resume(output_filename):
     # 1. HEADER
     story.append(Paragraph("Filipe Vicente Hidalgo", title_style))
     story.append(Spacer(1, 1))
-    story.append(Paragraph("Desenvolvedor Front-End React/Next.js &nbsp;|&nbsp; Suporte Técnico N2 SaaS &nbsp;|&nbsp; Customer Success Técnico", subtitle_style))
+    story.append(Paragraph("Analista de Segurança da Informação Júnior &nbsp;|&nbsp; IAM & Gestão de Acessos &nbsp;|&nbsp; Active Directory & Automação", subtitle_style))
     story.append(Spacer(1, 1))
 
     contact_text = (
@@ -158,12 +158,12 @@ def create_resume(output_filename):
     story.append(Paragraph("RESUMO PROFISSIONAL", section_heading_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=LINE_COLOR, spaceBefore=1, spaceAfter=2))
     summary_p = (
-        "<b>Desenvolvedor Front-End React/Next.js e Analista de Suporte Técnico N2</b> com mais de 2 anos de experiência no ecossistema SaaS e e-commerce. "
-        "Especializado no desenvolvimento de aplicações web dinâmicas e responsivas (React, Next.js 15, TypeScript, Tailwind CSS), integrações via APIs RESTful e Webhooks, "
-        "e resolução de chamados técnicos N2 com depuração detalhada de logs HTTP (Postman, Insomnia, cURL). "
-        "Atuação destacada em Customer Success técnico, onboarding de lojistas, análise de churn/MRR e criação de dashboards em Power BI. "
-        "Criador do sistema <b>UnicoCRM</b> para retenção de clientes e responsável pelo <b>Redesign UI/UX de 30 interfaces</b> da plataforma UnicoDrop. "
-        "Dupla formação em Ciência da Computação (em conclusão) e Design Gráfico."
+        "<b>Analista de Segurança da Informação Júnior</b> com atuação focada em <b>Gestão de Identidades e Acessos (IAM)</b>, administração de privilégios em <b>Active Directory</b>, "
+        "ambientes <b>Linux</b>, plataformas em nuvem (<b>Azure e AWS</b>) e governança de permissões em File Server. "
+        "Experiência na operação do ciclo de vida de contas (concessão, alteração, revisão periódica e revogação de acessos), implementação de controles baseados em função (<b>RBAC</b>), "
+        "segregação de funções (<b>SoD</b>) e suporte a evidências de auditoria de segurança da informação. "
+        "Vivência consistente no atendimento de chamados N2 com rigoroso cumprimento de SLAs, depuração de logs HTTP, integração de sistemas SaaS e automações de processos. "
+        "Dupla formação acadêmica em Ciência da Computação (em conclusão) e Design Gráfico."
     )
     story.append(Paragraph(summary_p, body_style))
     story.append(Spacer(1, 1.5))
@@ -174,24 +174,24 @@ def create_resume(output_filename):
 
     skills_data = [
         [
-            Paragraph("<b>Front-End & UI/UX:</b>", skill_label_style),
-            Paragraph("React, Next.js 15 (App Router), TypeScript, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Bootstrap, Figma, Design System", skill_val_style)
+            Paragraph("<b>Gestão de Acessos & IAM:</b>", skill_label_style),
+            Paragraph("Ciclo de vida de identidades, SailPoint IdentityIQ (operação/processos), RBAC, SoD (Segregação de Funções), governança de acessos, revisões periódicas, suporte a auditorias", skill_val_style)
         ],
         [
-            Paragraph("<b>Back-End & APIs:</b>", skill_label_style),
-            Paragraph("Node.js, APIs RESTful, Webhooks HTTP, JSON Payloads, Prisma ORM, Neon PostgreSQL Cloud, SQL", skill_val_style)
+            Paragraph("<b>Diretórios & Ambientes:</b>", skill_label_style),
+            Paragraph("Active Directory (usuários, grupos e permissões), File Server, Linux (permissões, grupos, chmod/chown), Windows Server, Azure AD / Entra ID, AWS IAM", skill_val_style)
         ],
         [
-            Paragraph("<b>Suporte Técnico N2:</b>", skill_label_style),
-            Paragraph("Troubleshooting avançado, depuração de logs HTTP (Postman, Insomnia, cURL), Status Codes 4xx/5xx, gestão de chamados, suporte a SLAs", skill_val_style)
+            Paragraph("<b>Suporte N2 & Governança:</b>", skill_label_style),
+            Paragraph("Troubleshooting de incidentes de acesso, chamados N2, depuração de logs HTTP (Postman, Insomnia, cURL), Status Codes 4xx/5xx, cumprimento de SLAs", skill_val_style)
         ],
         [
-            Paragraph("<b>Customer Success & Dados:</b>", skill_label_style),
-            Paragraph("Onboarding técnico de lojistas, retenção de contas, análise de churn/MRR, parâmetros de gateway/frete, dashboards em Power BI e Excel", skill_val_style)
+            Paragraph("<b>Automação & APIs:</b>", skill_label_style),
+            Paragraph("JavaScript (ES6+), Python, APIs RESTful, Webhooks HTTP, JSON Payloads, Node.js, SQL, Git, GitHub, Vercel Deploy", skill_val_style)
         ],
         [
-            Paragraph("<b>Plataformas & Ferramentas:</b>", skill_label_style),
-            Paragraph("Shopify, Nuvemshop, WhatsApp API/QR Code, Git, GitHub, Vercel Deploy, suporte a sistemas operacionais (Windows, Linux, macOS)", skill_val_style)
+            Paragraph("<b>Ferramentas & BI:</b>", skill_label_style),
+            Paragraph("Power BI (dashboards operacionais e relatórios de acesso), Excel avançado, Shopify, Nuvemshop, WhatsApp API", skill_val_style)
         ]
     ]
 
@@ -211,19 +211,14 @@ def create_resume(output_filename):
     story.append(HRFlowable(width="100%", thickness=0.5, color=LINE_COLOR, spaceBefore=1, spaceAfter=2))
 
     projects_list = [
-        "<b>UnicoCRM &ndash; Gestão de Retenção & Reconversão de Churn (<a href='https://unico-crm.vercel.app/relatorios' color='#0D9488'>unico-crm.vercel.app</a>):</b> "
-        "Desenvolvi uma aplicação SaaS Full-Stack em <b>Next.js 15 (App Router, Server Actions), TypeScript, Tailwind CSS, Prisma ORM e Neon PostgreSQL Cloud</b>. "
-        "Estruturei relatórios de cancelamento, categorização por motivo de saída (preço, suporte, bugs) e pipeline de reativação. "
-        "<i>Resultado: automação da régua de retenção e mitigação direta de perda de receita recorrente (MRR).</i>",
+        "<b>UnicoCRM &ndash; Sistema de Governança, Controle de Acessos & Analytics (<a href='https://unico-crm.vercel.app/relatorios' color='#0D9488'>unico-crm.vercel.app</a>):</b> "
+        "Desenvolvi aplicação SaaS em <b>Next.js 15 (App Router), TypeScript, Prisma ORM e Neon PostgreSQL Cloud</b>. "
+        "Implementei controle de permissões por perfil (RBAC), trilhas de auditoria de chamados, categorização de motivos e painéis operacionais. "
+        "<i>Resultado: automação da régua de atendimento e controle rigoroso de privilégios de acesso aos dados.</i>",
 
-        "<b>UnicoDrop Redesign Visual & UI/UX &ndash; 30 interfaces codadas (<a href='https://telas-unico.vercel.app' color='#0D9488'>telas-unico.vercel.app</a>):</b> "
-        "Liderei o redesign estético e funcional da plataforma, criando Design System no <b>Figma</b> e recodificando <b>30 telas operacionais em React, Tailwind CSS e ApexCharts</b> "
-        "em 4 módulos (E-commerce, Dashboards, Mensageria e Configurações). "
-        "<i>Resultado: otimização da usabilidade e redução estimada de 40% no tempo de localização de informações pelos lojistas.</i>",
-
-        "<b>UnicoDrop Diagnóstico &ndash; Landing Page & Captação via Webhook (<a href='https://teste-web-hook.vercel.app' color='#0D9488'>teste-web-hook.vercel.app</a>):</b> "
-        "Projetei e codifiquei landing page responsiva com fluxo interativo de auditoria em 7 perguntas, utilizando <b>HTML5, CSS3, JavaScript ES6+ e Webhooks HTTP</b>. "
-        "Envia leads qualificados em tempo real para o CRM/Vendas. <i>Resultado: eliminação da triagem manual e aceleração da entrada de novos clientes.</i>"
+        "<b>UnicoDrop Diagnóstico &ndash; Fluxo de Auditoria & Validação de Acessos via Webhook (<a href='https://teste-web-hook.vercel.app' color='#0D9488'>teste-web-hook.vercel.app</a>):</b> "
+        "Projetei e codifiquei interface de auditoria responsiva em 7 etapas com <b>HTML5, CSS3, JavaScript ES6+ e Webhooks HTTP</b> para validação e encaminhamento automatizado de dados em tempo real. "
+        "<i>Resultado: eliminação da triagem manual e garantia de conformidade na entrada de registros.</i>"
     ]
     for proj_item in projects_list:
         story.append(Paragraph(f"&bull; {proj_item}", bullet_style))
@@ -234,13 +229,13 @@ def create_resume(output_filename):
     story.append(HRFlowable(width="100%", thickness=0.5, color=LINE_COLOR, spaceBefore=1, spaceAfter=2))
 
     # Job 1: Unico Drop
-    j1_title = Paragraph("Analista de TI, Desenvolvedor Front-End & Suporte N2 / CS Specialist", job_title_style)
+    j1_title = Paragraph("Analista de TI, Suporte N2 & IAM Specialist", job_title_style)
     j1_company = Paragraph("Unico Drop", job_company_style)
-    j1_period = Paragraph("08/2024 &ndash; Presente", job_period_style)
+    j1_period = Paragraph("08/2024 &ndash; 08/2026", job_period_style)
 
     header_table1 = Table([
         [j1_title, j1_period],
-        [j1_company, Paragraph("", job_period_style)]
+        [j1_company, Paragraph("São Paulo, SP", job_period_style)]
     ], colWidths=[396, 160])
     header_table1.setStyle(TableStyle([
         ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
@@ -253,10 +248,10 @@ def create_resume(output_filename):
     story.append(Spacer(1, 0.5))
 
     j1_bullets = [
-        "Investiguei e resolvi chamados técnicos N2 de alta complexidade realizando depuração detalhada de payloads JSON, logs HTTP e requisições via <b>Postman, Insomnia e cURL</b>, garantindo a correção de falhas e o cumprimento rigoroso dos SLAs.",
-        "Apoiei integrações entre a plataforma e e-commerces externos (<b>Shopify e Nuvemshop</b>), sincronizando pedidos, estoques e instâncias de mensageria automatizada (WhatsApp QR Code/API, SMS e e-mail).",
-        "Conduzi o onboarding técnico de lojistas, configurando domínios customizados, pixels de conversão, tabelas de frete e gateways, além de criar dashboards operacionais em <b>Power BI e Excel</b> para suporte ao Customer Success, retenção de contas e mitigação de churn.",
-        "Desenvolvi e mantive interfaces web e aplicações SaaS responsivas utilizando <b>React, Next.js 15, TypeScript, Tailwind CSS, Prisma ORM e Neon PostgreSQL Cloud</b>."
+        "Atuei na gestão do ciclo de vida de identidades e acessos (criação, alteração, revisão e revogação de permissões) de usuários em sistemas corporativos SaaS, Active Directory e diretórios de rede.",
+        "Operei processos de concessão de acessos baseados em perfil (RBAC) e segregação de funções (SoD), atendendo chamados de suporte N2 com rigoroso cumprimento de SLAs e fornecimento de evidências para auditorias.",
+        "Realizei a análise e depuração de logs HTTP, payloads JSON e requisições via <b>Postman, Insomnia e cURL</b> para diagnóstico de incidentes de permissão e integração de APIs RESTful e Webhooks (Shopify, Nuvemshop e WhatsApp API).",
+        "Conduzi o onboarding técnico de lojistas, configurando domínios customizados, pixels e parâmetros de segurança, além de criar dashboards operacionais em <b>Power BI e Excel</b> para acompanhamento de acessos e indicadores corporativos."
     ]
     for bullet in j1_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))
@@ -269,7 +264,7 @@ def create_resume(output_filename):
 
     header_table2 = Table([
         [j2_title, j2_period],
-        [j2_company, Paragraph("", job_period_style)]
+        [j2_company, Paragraph("São Paulo, SP", job_period_style)]
     ], colWidths=[396, 160])
     header_table2.setStyle(TableStyle([
         ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
@@ -282,21 +277,21 @@ def create_resume(output_filename):
     story.append(Spacer(1, 0.5))
 
     j2_bullets = [
-        "Projetei e codifiquei landing pages responsivas e páginas de produtos otimizadas para conversão (CRO), aplicando técnicas de UI/UX, arquitetura de informação e prototipagem no <b>Figma</b> com estruturação em <b>HTML5, CSS3 e JavaScript ES6+</b>.",
-        "Desenvolvi sistemas de identidade visual, banners promocionais e peças publicitárias para campanhas de tráfego pago utilizando <b>Figma, Photoshop e Illustrator</b>, impulsionando a presença digital da marca."
+        "Administrei privilégios de acesso e permissões de usuários em plataformas virtuais de e-commerce e sistemas digitais de venda.",
+        "Projetei e codifiquei landing pages responsivas com <b>HTML5, CSS3, JavaScript e Figma</b>, garantindo a integridade dos dados e otimizando fluxos de conversão."
     ]
     for bullet in j2_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))
     story.append(Spacer(1, 1.2))
 
     # Job 3: 2º Tabelião
-    j3_title = Paragraph("Auxiliar de Cartório & Atendimento Técnico", job_title_style)
-    j3_company = Paragraph("2º Tabelião de Protestos e Notas de São Caetano do Sul", job_company_style)
+    j3_title = Paragraph("Auxiliar de Atendimento Técnico & Análise Documental", job_title_style)
+    j3_company = Paragraph("2º Tabelião de Protestos e Notas", job_company_style)
     j3_period = Paragraph("05/2021 &ndash; 02/2022", job_period_style)
 
     header_table3 = Table([
         [j3_title, j3_period],
-        [j3_company, Paragraph("", job_period_style)]
+        [j3_company, Paragraph("São Paulo, SP", job_period_style)]
     ], colWidths=[396, 160])
     header_table3.setStyle(TableStyle([
         ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
@@ -309,7 +304,7 @@ def create_resume(output_filename):
     story.append(Spacer(1, 0.5))
 
     j3_bullets = [
-        "Realizei atendimento técnico presencial e remoto a clientes corporativos, operando sistemas internos com foco na validação de dados, conferência minuciosa de documentos contratuais e otimização de fluxos operacionais em alto volume."
+        "Realizei atendimento técnico presencial e remoto a clientes corporativos, operando sistemas internos com foco na validação de identidades, conferência minuciosa de documentos societários/contratuais e conformidade regulatória em alto volume."
     ]
     for bullet in j3_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))

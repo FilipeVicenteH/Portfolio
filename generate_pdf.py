@@ -141,7 +141,7 @@ def create_resume(output_filename):
     # 1. HEADER
     story.append(Paragraph("Filipe Vicente Hidalgo", title_style))
     story.append(Spacer(1, 1))
-    story.append(Paragraph("Analista de Segurança da Informação Júnior &nbsp;|&nbsp; Suporte Técnico N2 &nbsp;|&nbsp; Ciência da Computação", subtitle_style))
+    story.append(Paragraph("Analista de Segurança da Informação Júnior &nbsp;|&nbsp; IAM & Gestão de Acessos &nbsp;|&nbsp; Active Directory & Automação", subtitle_style))
     story.append(Spacer(1, 1))
 
     contact_text = (
@@ -158,10 +158,12 @@ def create_resume(output_filename):
     story.append(Paragraph("RESUMO PROFISSIONAL", section_heading_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=LINE_COLOR, spaceBefore=1, spaceAfter=2))
     summary_p = (
-        "<b>Analista de Segurança da Informação Júnior</b> com sólida base em <b>Ciência da Computação</b> (em conclusão) e mais de 2 anos de experiência em "
-        "<b>Suporte Técnico N2</b>, sustentação de sistemas SaaS e suporte à gestão de acessos de usuários. "
-        "Vivência prática no diagnóstico de incidentes de tecnologia, depuração detalhada de logs HTTP (Postman, Insomnia, cURL), análise de solicitações de concessão e revogação de acessos em plataformas corporativas, e cumprimento rigoroso de SLAs. "
-        "Habilidade no desenvolvimento de automações e aplicações web (React, Next.js 15, JavaScript, APIs RESTful, SQL) e criação de dashboards em Power BI para visibilidade de indicadores operacionais e auditoria interna. "
+        "<b>Analista de Segurança da Informação Júnior</b> com sólida base em <b>Ciência da Computação</b> (em conclusão) e mais de 2 anos de experiência prática em "
+        "<b>Suporte Técnico N2</b>, sustentação de sistemas SaaS e administração de acessos de usuários. "
+        "Conhecimentos em conceitos de <b>IAM (Gestão de Identidades e Acessos)</b>, ciclo de vida de contas (provisionamento, revisão e revogação), controle de acesso por função (<b>RBAC</b>), "
+        "<b>Active Directory</b> (usuários, grupos e permissões), ambientes <b>Linux</b> e governança de acessos em File Server. "
+        "Vivência no diagnóstico de incidentes de tecnologia, depuração de logs HTTP (Postman, Insomnia, cURL) e cumprimento de SLAs corporativos. "
+        "Habilidade no desenvolvimento de automações e aplicações web (React, Next.js 15, JavaScript, APIs RESTful, SQL) e criação de dashboards em Power BI. "
         "Dupla formação acadêmica com Bacharelado em Ciência da Computação e Tecnólogo em Design Gráfico."
     )
     story.append(Paragraph(summary_p, body_style))
@@ -173,12 +175,16 @@ def create_resume(output_filename):
 
     skills_data = [
         [
-            Paragraph("<b>Segurança & Acessos:</b>", skill_label_style),
-            Paragraph("Administração de contas e usuários em plataformas SaaS, suporte à concessão e revogação de acessos, verificação de registros de logs, boas práticas de segurança da informação", skill_val_style)
+            Paragraph("<b>Gestão de Identidades & IAM:</b>", skill_label_style),
+            Paragraph("Ciclo de vida de identidades (provisionamento/revogação), RBAC, conceitos de SoD (Segregação de Funções), governança de acessos, revisões periódicas e evidências para auditoria de TI", skill_val_style)
         ],
         [
-            Paragraph("<b>Suporte Técnico N2:</b>", skill_label_style),
-            Paragraph("Troubleshooting avançado de incidentes, depuração de logs HTTP (Postman, Insomnia, cURL), Status Codes 4xx/5xx, gestão de chamados operacionais, atendimento a SLAs", skill_val_style)
+            Paragraph("<b>Diretórios & Ambientes:</b>", skill_label_style),
+            Paragraph("Active Directory (gestão de usuários, grupos e permissões), File Server, permissões em Linux (usuários, grupos, chmod/chown), Windows Server e noções de IAM em nuvem (Azure/AWS)", skill_val_style)
+        ],
+        [
+            Paragraph("<b>Suporte Técnico N2 & SLAs:</b>", skill_label_style),
+            Paragraph("Troubleshooting avançado de incidentes, depuração de logs HTTP (Postman, Insomnia, cURL), Status Codes 4xx/5xx, gestão de chamados operacionais e atendimento a SLAs", skill_val_style)
         ],
         [
             Paragraph("<b>Desenvolvimento & Automação:</b>", skill_label_style),
@@ -187,10 +193,6 @@ def create_resume(output_filename):
         [
             Paragraph("<b>Análise de Dados & BI:</b>", skill_label_style),
             Paragraph("Dashboards em Power BI e Excel avançado para acompanhamento de chamados, visibilidade de uso de ferramentas, métricas de retenção e relatórios gerenciais", skill_val_style)
-        ],
-        [
-            Paragraph("<b>Sistemas & Atendimento:</b>", skill_label_style),
-            Paragraph("Suporte a sistemas operacionais (Windows, Linux, macOS), atendimento técnico a clientes corporativos e conferência minuciosa de documentos societários/contratuais", skill_val_style)
         ]
     ]
 

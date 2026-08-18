@@ -141,7 +141,7 @@ def create_resume(output_filename):
     # 1. HEADER
     story.append(Paragraph("Filipe Vicente Hidalgo", title_style))
     story.append(Spacer(1, 1))
-    story.append(Paragraph("Analista de Segurança da Informação Júnior &nbsp;|&nbsp; IAM & Gestão de Acessos &nbsp;|&nbsp; Active Directory & Automação", subtitle_style))
+    story.append(Paragraph("Analista de Engenharia de Software Júnior &nbsp;|&nbsp; Java & Spring Boot &nbsp;|&nbsp; React / Next.js & APIs REST", subtitle_style))
     story.append(Spacer(1, 1))
 
     contact_text = (
@@ -158,12 +158,12 @@ def create_resume(output_filename):
     story.append(Paragraph("RESUMO PROFISSIONAL", section_heading_style))
     story.append(HRFlowable(width="100%", thickness=0.5, color=LINE_COLOR, spaceBefore=1, spaceAfter=2))
     summary_p = (
-        "<b>Analista de Segurança da Informação Júnior</b> com sólida base em <b>Ciência da Computação</b> (em conclusão) e mais de 2 anos de experiência prática em "
-        "<b>Suporte Técnico N2</b>, sustentação de sistemas SaaS e administração de acessos de usuários. "
-        "Conhecimentos em conceitos de <b>IAM (Gestão de Identidades e Acessos)</b>, ciclo de vida de contas (provisionamento, revisão e revogação), controle de acesso por função (<b>RBAC</b>), "
-        "<b>Active Directory</b> (usuários, grupos e permissões), ambientes <b>Linux</b> e governança de acessos em File Server. "
-        "Vivência no diagnóstico de incidentes de tecnologia, depuração de logs HTTP (Postman, Insomnia, cURL) e cumprimento de SLAs corporativos. "
-        "Habilidade no desenvolvimento de automações e aplicações web (React, Next.js 15, JavaScript, APIs RESTful, SQL) e criação de dashboards em Power BI. "
+        "<b>Analista de Engenharia de Software Júnior</b> com sólida base em <b>Ciência da Computação</b> (em conclusão) e mais de 2 anos de experiência prática no "
+        "desenvolvimento de software, sustentação de aplicações web/SaaS e suporte N2. "
+        "Conhecimentos no desenvolvimento de soluções backend e APIs RESTful utilizando <b>Java (Spring Boot, Spring MVC, Spring Data)</b>, <b>Node.js</b>, "
+        "<b>SQL (PostgreSQL, Oracle)</b> e documentação com <b>Swagger/OpenAPI</b>, integrados a interfaces modernas no frontend (<b>React, Next.js 15, TypeScript, Tailwind CSS</b>). "
+        "Vivência no desenvolvimento de testes unitários e de integração (<b>JUnit</b>), depuração de incidentes em produção com análise de logs (<b>Log4j2, HTTP</b>), "
+        "controle de versão com <b>Git/GitHub</b> e garantia de SLAs de sustentação. "
         "Dupla formação acadêmica com Bacharelado em Ciência da Computação e Tecnólogo em Design Gráfico."
     )
     story.append(Paragraph(summary_p, body_style))
@@ -175,24 +175,24 @@ def create_resume(output_filename):
 
     skills_data = [
         [
-            Paragraph("<b>Gestão de Identidades & IAM:</b>", skill_label_style),
-            Paragraph("Ciclo de vida de identidades (provisionamento/revogação), RBAC, conceitos de SoD (Segregação de Funções), governança de acessos, revisões periódicas e evidências para auditoria de TI", skill_val_style)
+            Paragraph("<b>Linguagens & Backend:</b>", skill_label_style),
+            Paragraph("Java (8+), JavaScript (ES6+), TypeScript, Node.js, Spring Framework (Spring Boot, Spring MVC, Spring Data), APIs RESTful, Webhooks, Swagger/OpenAPI", skill_val_style)
         ],
         [
-            Paragraph("<b>Diretórios & Ambientes:</b>", skill_label_style),
-            Paragraph("Active Directory (gestão de usuários, grupos e permissões), File Server, permissões em Linux (usuários, grupos, chmod/chown), Windows Server e noções de IAM em nuvem (Azure/AWS)", skill_val_style)
+            Paragraph("<b>Frontend & UI/UX:</b>", skill_label_style),
+            Paragraph("React, Next.js 15 (App Router), HTML5, CSS3, Tailwind CSS, Bootstrap, Figma, Design System, usabilidade e componentização", skill_val_style)
         ],
         [
-            Paragraph("<b>Suporte Técnico N2 & SLAs:</b>", skill_label_style),
-            Paragraph("Troubleshooting avançado de incidentes, depuração de logs HTTP (Postman, Insomnia, cURL), Status Codes 4xx/5xx, gestão de chamados operacionais e atendimento a SLAs", skill_val_style)
+            Paragraph("<b>Bancos de Dados & SQL:</b>", skill_label_style),
+            Paragraph("SQL, Oracle, PostgreSQL (Neon Cloud), Prisma ORM, modelagem de dados, consultas otimizadas e persistência", skill_val_style)
         ],
         [
-            Paragraph("<b>Desenvolvimento & Automação:</b>", skill_label_style),
-            Paragraph("JavaScript (ES6+), React, Next.js 15 (App Router), TypeScript, HTML5, CSS3, Tailwind CSS, APIs RESTful, Webhooks HTTP, JSON, Node.js, SQL, Git, GitHub", skill_val_style)
+            Paragraph("<b>Testes, Logs & Sustentação:</b>", skill_label_style),
+            Paragraph("JUnit (testes unitários e de integração), Log4j2, depuração de logs HTTP (Postman, Insomnia, cURL), Status Codes 4xx/5xx, suporte N2, SLAs", skill_val_style)
         ],
         [
-            Paragraph("<b>Análise de Dados & BI:</b>", skill_label_style),
-            Paragraph("Dashboards em Power BI e Excel avançado para acompanhamento de chamados, visibilidade de uso de ferramentas, métricas de retenção e relatórios gerenciais", skill_val_style)
+            Paragraph("<b>DevOps & Ferramentas:</b>", skill_label_style),
+            Paragraph("Git, GitHub, Vercel Deploy, noções de Docker e CI/CD, ambientes Windows, Linux e macOS, inglês intermediário para documentação técnica", skill_val_style)
         ]
     ]
 
@@ -212,19 +212,18 @@ def create_resume(output_filename):
     story.append(HRFlowable(width="100%", thickness=0.5, color=LINE_COLOR, spaceBefore=1, spaceAfter=2))
 
     projects_list = [
-        "<b>UnicoCRM &ndash; Sistema de Gestão & Painel Operacional (<a href='https://unico-crm.vercel.app/relatorios' color='#0D9488'>unico-crm.vercel.app</a>):</b> "
-        "Desenvolvi aplicação SaaS Full-Stack em <b>Next.js 15 (App Router), TypeScript, Prisma ORM e Neon PostgreSQL Cloud</b>. "
-        "Implementei controle de permissões de usuários, relatórios de ocorrências e histórico de atendimento. "
-        "<i>Resultado: automação da régua de acompanhamento e organização de dados operacionais.</i>",
+        "<b>UnicoCRM &ndash; Sistema SaaS Full-Stack de Gestão & Sustentação (<a href='https://unico-crm.vercel.app/relatorios' color='#0D9488'>unico-crm.vercel.app</a>):</b> "
+        "Desenvolvi aplicação SaaS com <b>Next.js 15 (App Router, Server Actions), TypeScript, Tailwind CSS, Prisma ORM e PostgreSQL Cloud</b>. "
+        "Implementei arquitetura de APIs RESTful, persistência em banco de dados, regras de negócio para relatórios operacionais e testes de integração. "
+        "<i>Resultado: automação do fluxo de atendimento e estabilidade da solução em nuvem.</i>",
 
         "<b>UnicoDrop Redesign Visual & UI/UX &ndash; 30 interfaces codadas (<a href='https://telas-unico.vercel.app' color='#0D9488'>telas-unico.vercel.app</a>):</b> "
-        "Liderei a reformulação visual da plataforma, criando Design System no <b>Figma</b> e recodificando <b>30 telas operacionais em React e Tailwind CSS</b> "
-        "em 4 módulos (E-commerce, Dashboards, Mensageria e Configurações). "
+        "Liderei o redesign funcional de 30 telas em React e Tailwind CSS organizadas em 4 módulos operacionais, aplicando boas práticas de componentização e otimização. "
         "<i>Resultado: otimização da usabilidade e redução estimada em 40% no tempo de busca de informações.</i>",
 
-        "<b>UnicoDrop Diagnóstico &ndash; Fluxo de Auditoria via Webhook (<a href='https://teste-web-hook.vercel.app' color='#0D9488'>teste-web-hook.vercel.app</a>):</b> "
-        "Projetei e codifiquei interface de auditoria em 7 etapas com <b>HTML5, CSS3, JavaScript ES6+ e Webhooks HTTP</b> para validação e encaminhamento de dados em tempo real. "
-        "<i>Resultado: eliminação da triagem manual inicial.</i>"
+        "<b>UnicoDrop Diagnóstico &ndash; Integração via Webhook & APIs (<a href='https://teste-web-hook.vercel.app' color='#0D9488'>teste-web-hook.vercel.app</a>):</b> "
+        "Interface responsiva com fluxo interativo em 7 etapas desenvolvida com <b>HTML5, CSS3, JS assíncrono e consumo de Webhooks HTTP</b> para comunicação de dados em tempo real. "
+        "<i>Resultado: automação da entrada de dados e eliminação de triagem manual.</i>"
     ]
     for proj_item in projects_list:
         story.append(Paragraph(f"&bull; {proj_item}", bullet_style))
@@ -254,10 +253,10 @@ def create_resume(output_filename):
     story.append(Spacer(1, 0.5))
 
     j1_bullets = [
-        "Diagnostiquei e resolvi chamados técnicos N2 de alta complexidade, realizando depuração de logs HTTP, payloads JSON e requisições via <b>Postman, Insomnia e cURL</b> com foco no cumprimento de SLAs.",
-        "Atuei no suporte à administração de contas, controle de acessos de lojistas e resolução de falhas em integrações com e-commerces (<b>Shopify e Nuvemshop</b>) e serviços de mensageria (WhatsApp QR Code/API, SMS e e-mail).",
-        "Conduzi o onboarding técnico de lojistas, auxiliando na configuração de domínios customizados, pixels e parâmetros de segurança, além de estruturar dashboards operacionais em <b>Power BI e Excel</b> para suporte ao acompanhamento de métricas da plataforma.",
-        "Desenvolvi e mantive aplicações e interfaces web responsivas utilizando <b>React, Next.js 15, TypeScript, Tailwind CSS, Prisma ORM e Neon PostgreSQL Cloud</b>."
+        "Atuei no desenvolvimento, evolução sistêmica e sustentação de aplicações SaaS, construindo e mantendo interfaces e integrações de dados com <b>React, Next.js 15, TypeScript, Tailwind CSS, Node.js e SQL</b>.",
+        "Prestei suporte e sustentação N2 aos sistemas em produção, realizando troubleshooting avançado, depuração de erros com análise de logs (<b>Log4j2, logs HTTP</b>) e requisições via Postman/cURL para diagnóstico e resolução de incidentes.",
+        "Atuei na integração de APIs RESTful e Webhooks com serviços externos (Shopify, Nuvemshop e APIs de mensageria), garantindo o tráfego seguro de JSON payloads e o cumprimento dos SLAs.",
+        "Conduzi testes operacionais e onboarding técnico de clientes, além de construir dashboards no <b>Power BI e Excel</b> para visibilidade da estabilidade das aplicações."
     ]
     for bullet in j1_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))
@@ -283,8 +282,8 @@ def create_resume(output_filename):
     story.append(Spacer(1, 0.5))
 
     j2_bullets = [
-        "Gerenciei permissões e acessos de usuários em plataformas de e-commerce e sistemas digitais de venda.",
-        "Projetei e codifiquei landing pages responsivas e páginas de produto com <b>HTML5, CSS3, JavaScript e Figma</b>, além de criar identidades visuais e materiais institucionais no Photoshop e Illustrator."
+        "Desenvolvi landing pages responsivas e componentes web com <b>HTML5, CSS3, JavaScript e Figma</b>, aplicando boas práticas de arquitetura de informação e usabilidade.",
+        "Gerenciei configurações e integrações visuais em plataformas de e-commerce e sistemas digitais de venda."
     ]
     for bullet in j2_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))
@@ -310,7 +309,7 @@ def create_resume(output_filename):
     story.append(Spacer(1, 0.5))
 
     j3_bullets = [
-        "Realizei atendimento técnico presencial e remoto a clientes corporativos, operando sistemas internos com foco na validação de dados, conferência minuciosa de documentos societários/contratuais e organização de fluxos operacionais em alto volume."
+        "Realizei atendimento técnico ao público e clientes corporativos, operando sistemas internos com foco na validação de dados, conferência minuciosa de documentos e otimização de fluxos de trabalho."
     ]
     for bullet in j3_bullets:
         story.append(Paragraph(f"&bull; {bullet}", bullet_style))
